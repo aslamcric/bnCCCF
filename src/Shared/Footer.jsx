@@ -151,7 +151,9 @@ export default function Footer() {
 
                 <div className="footer-bottom">
                     <div className="footer-wrapper">
-                        <p>Copyright &amp; Design By <span>@Kindi</span></p>
+                        {/* <p>Copyright &amp; Design By <span>@Kindi</span></p> */}
+                        <p>Copyright © {new Date().getFullYear()} Center for Cancer Care Foundation (CCCF). All Rights Reserved.</p>
+
                         <ul className="footer-bottom-list">
                             <li>
                                 <a href="faq.html">Faq</a>
