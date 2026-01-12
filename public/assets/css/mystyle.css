@@ -1,0 +1,10 @@
+/* Top Header */
+.topMenuContactText {
+    text-transform: none;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.topMenuContactTextMobile {
+    text-transform: none;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function TopHeader() {
   return (
@@ -13,7 +14,7 @@ export default function TopHeader() {
               </div>
               <div className="content">
                 <span>Locate Address</span>
-                <h6>Dhaka, Bangladesh</h6>
+                <h6 className="topMenuContactText">Dhaka, Bangladesh</h6>
               </div>
             </div>
 
@@ -23,7 +24,7 @@ export default function TopHeader() {
               </div>
               <div className="content">
                 <span>Call Us any time</span>
-                <h6>
+                <h6 className="topMenuContactText">
                   <a href="+880 1610-377725">+880 1610-377725</a>
                 </h6>
               </div>
@@ -35,7 +36,7 @@ export default function TopHeader() {
               </div>
               <div className="content">
                 <span>Email</span>
-                <h6>
+                <h6 className="topMenuContactText">
                   <a href="mailto:cccbangladesh2023@gmail.com">
                     cccbangladesh2023@gmail.com
                   </a>
@@ -44,16 +45,19 @@ export default function TopHeader() {
             </div>
 
             <div className="social-icon">
-              <a href="#">
-                <i className="fa-brands fa-twitter"></i>
+              <a target="_blank" href="https://www.facebook.com/CCCBpage">
+                <i className="fab fa-facebook-f"></i>
               </a>
+              {/* <a href="#">
+                <i className="fa-brands fa-twitter"></i>
+              </a> */}
               <a href="#">
                 <i className="fa-brands fa-whatsapp"></i>
               </a>
               <a href="#">
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="#">
+              <a target="_blank" href="https://www.youtube.com/cccf23">
                 <i className="fa-brands fa-youtube"></i>
               </a>
             </div>
@@ -79,11 +83,11 @@ export default function TopHeader() {
                 </div>
               </div>
 
-              <p className="text d-none d-xl-block">
+              {/* <p className="text d-none d-xl-block">
                 Nullam dignissim, ante scelerisque the is euismod fermentum odio
                 sem semper the is erat, a feugiat leo urna eget eros. Duis
                 Aenean a imperdiet risus.
-              </p>
+              </p> */}
 
               <div className="mobile-menu fix mb-3"></div>
 
@@ -96,7 +100,7 @@ export default function TopHeader() {
                     </div>
                     <div className="offcanvas__contact-text">
                       <a target="_blank" rel="noreferrer" href="#">
-                        Main Street, Melbourne, Australia
+                        Dhaka, Bangladesh
                       </a>
                     </div>
                   </li>
@@ -105,8 +109,8 @@ export default function TopHeader() {
                     <div className="offcanvas__contact-icon mr-15">
                       <i className="fal fa-envelope"></i>
                     </div>
-                    <div className="offcanvas__contact-text">
-                      <a href="mailto:info@example.com">info@example.com</a>
+                    <div className="offcanvas__contact-text topMenuContactTextMobile" target="_blank">
+                      <a target="_blank" href="mailto:cccbangladesh2023@gmail.com">cccbangladesh2023@gmail.com</a>
                     </div>
                   </li>
 
@@ -116,7 +120,7 @@ export default function TopHeader() {
                     </div>
                     <div className="offcanvas__contact-text">
                       <a target="_blank" rel="noreferrer" href="#">
-                        Mod-friday, 09am -05pm
+                        Always
                       </a>
                     </div>
                   </li>
@@ -126,19 +130,19 @@ export default function TopHeader() {
                       <i className="far fa-phone"></i>
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="tel:+11002345909">+11002345909</a>
+                      <a href="tel:+880 1610-377725">+880 1610-377725</a>
                     </div>
                   </li>
                 </ul>
 
                 <div className="social-icon d-flex align-items-center">
-                  <a href="#">
+                  <a target="_blank" href="https://www.facebook.com/CCCBpage">
                     <i className="fab fa-facebook-f"></i>
                   </a>
                   <a href="#">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a target="_blank" href="https://www.youtube.com/cccf23">
                     <i className="fab fa-youtube"></i>
                   </a>
                   <a href="#">

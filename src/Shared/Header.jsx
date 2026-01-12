@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TopHeader from "./TopHeader";
-import MouseCursorNB2T from "./MouseCursorNB2T";
+// import MouseCursorNB2T from "./MouseCursorNB2T";
 
 export default function Header() {
   return (
     <>
-      <MouseCursorNB2T />
+      {/* <MouseCursorNB2T /> */}
 
       <TopHeader />
 
