@@ -5,10 +5,12 @@ import Header3 from "../Shared/Header3";
 import Footer from "../Shared/Footer";
 import MouseCursor from "../components/MouseCursor";
 import BackToTop from "../components/BackToTop";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Root = () => {
   return (
     <div>
+      <ScrollToTop />
       <MouseCursor />
       <BackToTop />
 
