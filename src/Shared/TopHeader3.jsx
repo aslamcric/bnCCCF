@@ -1,49 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-export default function TopHeader() {
+export default function TopHeader3() {
   return (
     <div>
-      {/* Header - Top Start */}
-      <div className="header-top-section">
+      {/* Header-top-section-2 Start */}
+      <div className="header-top-section-2">
         <div className="container-fluid">
-          <div className="header-top-wrapper">
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-regular fa-location-dot"></i>
-              </div>
-              <div className="content">
-                <span>Locate Address</span>
-                <h6 className="topMenuContactText">Dhaka, Bangladesh</h6>
-              </div>
-            </div>
-
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-solid fa-phone-volume"></i>
-              </div>
-              <div className="content">
-                <span>Call Us any time</span>
-                <h6 className="topMenuContactText">
-                  <a href="+880 1610-377725">+880 1610-377725</a>
-                </h6>
-              </div>
-            </div>
-
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-regular fa-envelope"></i>
-              </div>
-              <div className="content">
-                <span>Email</span>
-                <h6 className="topMenuContactText">
+          <div className="header-top-wrapper-2">
+            <div className="header-left">
+              <ul className="list-icon">
+                <li>
+                  <i className="fa-regular fa-location-dot" />
+                  Dhaka, Bangladesh
+                </li>
+                <li>
+                  <i className="fa-solid fa-phone-volume" />
                   <a href="mailto:cccbangladesh2023@gmail.com">
                     cccbangladesh2023@gmail.com
                   </a>
-                </h6>
-              </div>
+                </li>
+                <li>
+                  <i className="fa-solid fa-phone-volume" />
+                  <a href="tel:+880 1610-377725">+880 1610-377725</a>
+                </li>
+              </ul>
             </div>
-
             <div className="social-icon">
               <a target="_blank" href="https://www.facebook.com/CCCBpage">
                 <i className="fab fa-facebook-f"></i>
@@ -78,67 +59,55 @@ export default function TopHeader() {
                 </div>
                 <div className="offcanvas__close">
                   <button>
-                    <i className="fas fa-times"></i>
+                    <i className="fas fa-times" />
                   </button>
                 </div>
               </div>
-
               {/* <p className="text d-none d-xl-block">
                 Nullam dignissim, ante scelerisque the is euismod fermentum odio
                 sem semper the is erat, a feugiat leo urna eget eros. Duis
                 Aenean a imperdiet risus.
               </p> */}
-
-              <div className="mobile-menu fix mb-3"></div>
-
+              <div className="mobile-menu fix mb-3" />
               <div className="offcanvas__contact d-xl-block">
                 <h4 className="d-xl-block">Contact Info</h4>
                 <ul className="d-xl-block">
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon">
-                      <i className="fal fa-map-marker-alt"></i>
+                      <i className="fal fa-map-marker-alt" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a target="_blank" rel="noreferrer" href="#">
+                      <a target="_blank" href="#">
                         Dhaka, Bangladesh
                       </a>
                     </div>
                   </li>
-
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon mr-15">
-                      <i className="fal fa-envelope"></i>
+                      <i className="fal fa-envelope" />
                     </div>
-                    <div
-                      className="offcanvas__contact-text topMenuContactTextMobile"
-                      target="_blank"
-                    >
-                      <a
-                        target="_blank"
-                        href="mailto:cccbangladesh2023@gmail.com"
-                      >
-                        cccbangladesh2023@gmail.com
+                    <div className="offcanvas__contact-text">
+                      <a target="_blank" href="mailto:info@example.com">
+                        <span className="mailto:cccbangladesh2023@gmail.com">
+                          cccbangladesh2023@gmail.com
+                        </span>
                       </a>
                     </div>
                   </li>
-
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon mr-15">
-                      <i className="fal fa-clock"></i>
+                      <i className="fal fa-clock" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a target="_blank" rel="noreferrer" href="#">
-                        Always
-                      </a>
+                      <a href="#">Alaways</a>
                     </div>
                   </li>
-
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon mr-15">
-                      <i className="far fa-phone"></i>
+                      <i className="far fa-phone" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="tel:+880 1610-377725">+880 1610-377725</a>
+                      <a href="tel:+880 1610-377725">++880 1610-377725</a>
                     </div>
                   </li>
                 </ul>
@@ -163,7 +132,7 @@ export default function TopHeader() {
         </div>
       </div>
 
-      <div className="offcanvas__overlay"></div>
+      <div className="offcanvas__overlay" />
     </div>
   );
 }

@@ -1,31 +1,31 @@
-import React from 'react'
-import HeroSection from '../Section/homeSection/HeroSection'
-import AboutSection from '../Section/homeSection/AboutSection'
-import ServiceSection from '../Section/homeSection/ServiceSection'
-import DonationSection from '../Section/homeSection/DonationSection'
-import ProjectSection from '../Section/homeSection/ProjectSection'
-import TeamSection from '../Section/homeSection/TeamSection'
-import TestimonialSection from '../Section/homeSection/TestimonialSection'
-import CounterSection from '../Section/homeSection/CounterSection'
-import FaqSection from '../Section/homeSection/FaqSection'
-import NewsSection from '../Section/homeSection/NewsSection'
-import ContactSection from '../Section/homeSection/ContactSection'
+import React from "react";
+import HomeHeroSection from "../Section/HomeHeroSection";
+import AboutSection from "../Section/AboutSection";
+import ServiceSection from "../Section/ServiceSection";
+import DonationSection from "../Section/DonationSection";
+import ProjectSection from "../Section/ProjectSection";
+import TeamSection from "../Section/TeamSection";
+import TestimonialSection from "../Section/TestimonialSection";
+import CounterSection from "../Section/CounterSection";
+import FaqSection from "../Section/FaqSection";
+import NewsSection from "../Section/NewsSection";
+import ContactSection from "../Section/ContactSection";
 
 export default function Home() {
-    return (
-        <div>
-            {/* All section include  */}
-            <HeroSection />
-            <AboutSection />
-            <ServiceSection />
-            <DonationSection />
-            <ProjectSection />
-            <TeamSection />
-            <TestimonialSection />
-            <CounterSection />
-            <FaqSection />
-            <NewsSection />
-            <ContactSection />
-        </div>
-    )
+  return (
+    <div>
+      {/* All section include  */}
+      <HomeHeroSection />
+      <AboutSection />
+      <ServiceSection />
+      <DonationSection />
+      <ProjectSection />
+      <TeamSection />
+      <TestimonialSection />
+      <CounterSection />
+      <FaqSection />
+      <NewsSection />
+      <ContactSection />
+    </div>
+  );
 }

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ContactUsHeroSection from "../Section/ContactUsHeroSection";
+import ContactSection from "../Section/ContactSection";
+import ContactFormSection from "../Section/ContactFormSection";
 
 export default function ContactUs() {
   return (
     <div>
-      <h1>This is Contact Us Page</h1>
+      <ContactUsHeroSection />
+      {/* <ContactSection /> */}
+      <ContactFormSection />
     </div>
-  )
+  );
 }
