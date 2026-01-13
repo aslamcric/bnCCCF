@@ -107,7 +107,7 @@ export default function TopHeader3() {
                       <i className="far fa-phone" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="tel:+880 1610-377725">++880 1610-377725</a>
+                      <a href="tel:+880 1610-377725">+880 1610-377725</a>
                     </div>
                   </li>
                 </ul>

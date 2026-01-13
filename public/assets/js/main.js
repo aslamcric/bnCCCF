@@ -573,14 +573,14 @@
     }
 
     
-    function loader() {
-        $windowOn.on('load', function() {
-            // Animate loader off screen
-            $(".preloader").addClass('loaded');
-            $(".preloader").delay(200).fadeOut();
-        });
-    }
+    // function loader() {
+    //     $windowOn.on('load', function() {
+    //         // Animate loader off screen
+    //         $(".preloader").addClass('loaded');
+    //         $(".preloader").delay(200).fadeOut();
+    //     });
+    // }
     
-    loader();
+    // loader();
 
   })(jQuery); // End jQuery

@@ -8,7 +8,7 @@ export default function Header3() {
       <TopHeader3 />
 
       {/* Pre loader Start */}
-      <div id="preloader" className="preloader">
+      {/* <div id="preloader" className="preloader">
         <div className="animation-preloader">
           <div className="spinner"></div>
           <div className="txt-loading">
@@ -24,9 +24,6 @@ export default function Header3() {
             <span data-text-preloader="F" className="letters-loading">
               F
             </span>
-            {/* <span data-text-preloader="I" className="letters-loading">
-              I
-            </span> */}
           </div>
           <p className="text-center">Loading</p>
         </div>
@@ -46,7 +43,7 @@ export default function Header3() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Header Section Start */}
       <header id="header-sticky" className="header-1 header-2 header-3">

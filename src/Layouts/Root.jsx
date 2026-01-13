@@ -6,10 +6,12 @@ import Footer from "../Shared/Footer";
 import MouseCursor from "../components/MouseCursor";
 import BackToTop from "../components/BackToTop";
 import ScrollToTop from "../components/ScrollToTop";
+import Preloader from "../components/Preloader";
 
 const Root = () => {
   return (
     <div>
+      <Preloader />
       <ScrollToTop />
       <MouseCursor />
       <BackToTop />
