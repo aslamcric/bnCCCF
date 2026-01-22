@@ -1,46 +1,4 @@
-/*
-Theme Name: Kindi 
-Author: Pixel-plus
-Author URI: https://themeforest.net/user/Pixel-plus/portfolio
-Description: "Kindi - Non Profit Charity HTML Template
-Service Html Template 
-Version: 1.0.0
-*/
-/*CSS Table Of Content Ends Here*/
-/*
---------------------------------------------------------------
-[Table of Contents]
---------------------------------------------------------------
-01. Variables & Mixins
-02. Typography
-03. Buttons
-04. About 
-05. Animation 
-06. Brand 
-07. Contact
-08. Cta
-09. Donation
-10. Event
-11. Faq
-12. Feature
-13. Footer
-14. Header
-15. Helping
-16. Hero
-17. Marquee
-18. Meanmenu
-19. News
-20. Preloader
-21. Pricing
-20. Project
-21. Section
-22. Service
-23. Team
-24. Testimonial
-
---------------------------------------------------------------
-*/
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&amp;display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;display=swap");
 :root {
   --body: #fff;
@@ -127,9 +85,6 @@ Version: 1.0.0
   transform: rotate(0deg);
 }
 
-/* --------------------------------------------
-    Template Default Fonts & Fonts Styles
- ---------------------------------------------- */
 body {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
@@ -976,7 +931,7 @@ span {
     transform: translatey(0px);
   }
 }
-/*img-animation**********************/
+
 .img-custom-anim-right {
   animation: img-anim-right 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
   opacity: 0;
@@ -5768,13 +5723,11 @@ span {
   height: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px var(--bg);
   border-radius: 5px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--theme);
   border-radius: 10px;
@@ -10471,4 +10424,6 @@ span {
   color: var(--theme-2);
   position: relative;
   z-index: 999;
-}/*# sourceMappingURL=main.css.map */
+} 
+
+ */

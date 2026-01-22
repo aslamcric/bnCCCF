@@ -1,50 +1,11 @@
 import React from "react";
 import TopHeader3 from "./TopHeader3";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header3() {
   return (
     <div>
       <TopHeader3 />
-
-      {/* Pre loader Start */}
-      {/* <div id="preloader" className="preloader">
-        <div className="animation-preloader">
-          <div className="spinner"></div>
-          <div className="txt-loading">
-            <span data-text-preloader="C" className="letters-loading">
-              C
-            </span>
-            <span data-text-preloader="C" className="letters-loading">
-              C
-            </span>
-            <span data-text-preloader="C" className="letters-loading">
-              C
-            </span>
-            <span data-text-preloader="F" className="letters-loading">
-              F
-            </span>
-          </div>
-          <p className="text-center">Loading</p>
-        </div>
-        <div className="loader">
-          <div className="row">
-            <div className="col-3 loader-section section-left">
-              <div className="bg" />
-            </div>
-            <div className="col-3 loader-section section-left">
-              <div className="bg" />
-            </div>
-            <div className="col-3 loader-section section-right">
-              <div className="bg" />
-            </div>
-            <div className="col-3 loader-section section-right">
-              <div className="bg" />
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Header Section Start */}
       <header id="header-sticky" className="header-1 header-2 header-3">
         <div className="container-fluid">
@@ -57,20 +18,35 @@ export default function Header3() {
                   </Link>
                 </div>
               </div>
+
               <div className="mean__menu-wrapper">
                 <div className="main-menu">
                   <nav id="mobile-menu">
                     <ul>
                       <li className="has-dropdown active menu-thumb">
-                        <Link to="/home">Home</Link>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? "active" : ""
+                          }
+                          to="/"
+                        >
+                          Home
+                        </NavLink>
                       </li>
 
                       <li>
-                        <Link to="/about-us">About Us</Link>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? "active" : ""
+                          }
+                          to="/about-us"
+                        >
+                          About Us
+                        </NavLink>
                       </li>
 
                       <li className="has-dropdown">
-                        <Link to="#">Pages</Link>
+                        <Link to="#"> Pages </Link>
                         <ul className="submenu">
                           <li className="has-dropdown">
                             <a href="project-details.html">
@@ -156,11 +132,25 @@ export default function Header3() {
                       </li>
 
                       <li>
-                        <Link to="/blog">Blog</Link>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? "active" : ""
+                          }
+                          to="/blog"
+                        >
+                          Blog
+                        </NavLink>
                       </li>
 
                       <li>
-                        <Link to="/contact-us">Contact Us</Link>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? "active" : ""
+                          }
+                          to="/contact-us"
+                        >
+                          Contact Us
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>

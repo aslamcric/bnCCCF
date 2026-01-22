@@ -2,15 +2,21 @@ import { useEffect, useState } from "react";
 
 export default function Preloader() {
   const [loaded, setLoaded] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
-    // page load + animation delay
     const timer = setTimeout(() => {
       setLoaded(true);
-    }, 1200); // same timing as before
+
+      setTimeout(() => {
+        setShow(false);
+      }, 1000);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (!show) return null;
 
   return (
     <div className={`preloader ${loaded ? "loaded" : ""}`}>
@@ -37,16 +43,16 @@ export default function Preloader() {
 
       <div className="loader">
         <div className="row">
-          <div className="col-3 loader-section section-left">
+          <div className="col-3 loader-section">
             <div className="bg" />
           </div>
-          <div className="col-3 loader-section section-left">
+          <div className="col-3 loader-section">
             <div className="bg" />
           </div>
-          <div className="col-3 loader-section section-right">
+          <div className="col-3 loader-section">
             <div className="bg" />
           </div>
-          <div className="col-3 loader-section section-right">
+          <div className="col-3 loader-section">
             <div className="bg" />
           </div>
         </div>
