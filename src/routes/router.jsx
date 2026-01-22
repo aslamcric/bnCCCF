@@ -5,41 +5,45 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Blog from "../pages/Blog";
 import Pages from "../pages/Pages";
-// layouts 
+import ErrorPage from "../pages/ErrorPage";
+// layouts
 
-// public pages 
+// public pages
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Root></Root>,
-        // errorElement: <ErrorPage></ErrorPage>,
-        children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: '/home',
-                element: <Home />
-            },
-            {
-                path: '/about-us',
-                element: <AboutUs />
-            },
-            {
-                path: '/pages',
-                element: <Pages />
-            },
-            {
-                path: '/blog',
-                element: <Blog />
-            },
-            {
-                path: '/contact-us',
-                element: <ContactUs />
-            }
-        ]
-    },
-
-])
+  {
+    path: "/",
+    element: <Root></Root>,
+    // errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/pages",
+        element: <Pages />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+    ],
+  },
+]);
