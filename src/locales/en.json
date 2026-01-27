@@ -1,0 +1,158 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "pages": "Pages",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "pagesMenu": {
+      "cause": "Cause",
+      "ourCause": "Our Cause",
+      "causeDetails": "Cause Details",
+      "volunteer": "Volunteer",
+      "becomeVolunteer": "Become Volunteer",
+      "volunteerList": "Volunteer",
+      "volunteerDetails": "Volunteer Details",
+      "event": "Event",
+      "ourEvent": "Our Event",
+      "eventList": "Event List",
+      "eventDetails": "Event Details",
+      "donation": "Donation",
+      "ourDonation": "Our Donation",
+      "donationNow": "Donation Now",
+      "donationDetails": "Donation Details",
+      "pricing": "Our Pricing",
+      "faq": "Our FAQ"
+    }
+  },
+  "header": {
+    "address": "Dhaka, Bangladesh",
+    "email": "Support@example.com",
+    "phone": "+163 3654 7896",
+    "donate": "Donate Now",
+    "search": "Search Here..."
+  },
+  "hero": {
+    "common": {
+      "joinBtn": "Join With Us",
+      "readMoreBtn": "Read More"
+    },
+    "slide1": {
+      "subTitle": "Start Donating Poor People",
+      "title": "We Are Non Profit Charity Organization",
+      "desc": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility."
+    },
+    "slide2": {
+      "subTitle": "Education for All",
+      "title": "Your Small Help Can Change Lives",
+      "desc": "We are working to ensure the right to education for underprivileged children."
+    },
+    "slide3": {
+      "subTitle": "Pure Water Project",
+      "title": "Safe Water for Every Human",
+      "desc": "Ensuring access to clean and safe drinking water in remote areas."
+    }
+  },
+  "about": {
+    "subTitle": "About Us",
+    "title": "Our goal is to save more lives with your help.",
+    "description": "Overall, I cannot recommend The Gourmet Bistro highly enough. If you're looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further. I will definitely be returning.",
+    "fundraisingTitle": "Fundraising",
+    "fundraisingDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
+    "donationTitle": "Donation Marketing",
+    "donationDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
+    "button": "More About Us",
+    "name": "James Anderson",
+    "designation": "Software Engineer"
+  },
+
+  "service": {
+    "subTitle": "Charity Services",
+    "titleLetter": "P",
+    "titlePart1": "roviding Humanist services to all",
+    "titlePart2": "people is what we do",
+    "learnMore": "Learn More",
+    "item1": {
+      "title": "Healthy Foods",
+      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
+    },
+    "item2": {
+      "title": "Education",
+      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
+    },
+    "item3": {
+      "title": "Medical Help",
+      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
+    }
+  },
+
+  "donation": {
+    "subTitle": "Lets Start Donating",
+    "titleLetter": "S",
+    "titlePart1": "ee You Impact Transparent",
+    "titlePart2": "Donation Causes",
+    "learnMore": "Learn More",
+    "donateNow": "Donate Now",
+    "goal": "Goal",
+    "raised": "Raised",
+
+    "items": {
+      "item1": {
+        "title": "Give African Children a Good Education",
+        "desc": "Supporting education to build a better future for children."
+      },
+      "item2": {
+        "title": "Support Learning, Inspire Hope in Africa",
+        "desc": "Helping underprivileged children gain access to education."
+      },
+      "item3": {
+        "title": "Building Bright Futures With Every Lesson",
+        "desc": "Empowering communities through education initiatives."
+      },
+      "item4": {
+        "title": "Help Children Dream Bigger With Education",
+        "desc": "Education opens doors to opportunity and hope."
+      }
+    }
+  },
+
+  "project": {
+    "subTitle": "Complete Project",
+    "titleLetter": "O",
+    "titlePart1": "ur Recent completed Project",
+
+    "category": "Charity & Funding",
+
+    "items": {
+      "item1": {
+        "title": "Child Education Project"
+      },
+      "item2": {
+        "title": "Health & Medical Support Initiative"
+      },
+      "item3": {
+        "title": "Humanitarian Support for Underprivileged"
+      }
+    }
+  },
+
+  "footer": {
+    "quickLinks": "Quick Links",
+    "explore": "Explore Now",
+    "supports": "Supports",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+    "subscribe": "Subscribe Now",
+    "placeholder": "Enter Your Email",
+    "copyright": "Copyright © {{year}} Center for Cancer Care Foundation (CCCF). All Rights Reserved.",
+    "gallery": "Gallery",
+    "volunteers": "Volunteers",
+    "project": "Project",
+    "event": "Event",
+    "causes": "Causes",
+    "donation": "Donation",
+    "forums": "Forums",
+    "policy": "Support Policy",
+    "careers": "Careers"
+  }
+}

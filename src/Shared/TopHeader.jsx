@@ -1,169 +1,44 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function TopHeader() {
+  const { t, i18n } = useTranslation();
   return (
-    <div>
-      {/* Header - Top Start */}
-      <div className="header-top-section">
-        <div className="container-fluid">
-          <div className="header-top-wrapper">
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-regular fa-location-dot"></i>
-              </div>
-              <div className="content">
-                <span>Locate Address</span>
-                <h6 className="topMenuContactText">Dhaka, Bangladesh</h6>
-              </div>
-            </div>
-
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-solid fa-phone-volume"></i>
-              </div>
-              <div className="content">
-                <span>Call Us any time</span>
-                <h6 className="topMenuContactText">
-                  <a href="+880 1610-377725">+880 1610-377725</a>
-                </h6>
-              </div>
-            </div>
-
-            <div className="icon-items">
-              <div className="icon">
-                <i className="fa-regular fa-envelope"></i>
-              </div>
-              <div className="content">
-                <span>Email</span>
-                <h6 className="topMenuContactText">
-                  <a href="mailto:cccbangladesh2023@gmail.com">
-                    cccbangladesh2023@gmail.com
-                  </a>
-                </h6>
-              </div>
-            </div>
-
-            <div className="social-icon">
-              <a target="_blank" href="https://www.facebook.com/CCCBpage">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              {/* <a href="#">
-                <i className="fa-brands fa-twitter"></i>
-              </a> */}
-              <a href="#">
-                <i className="fa-brands fa-whatsapp"></i>
-              </a>
-              <a href="#">
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-              <a target="_blank" href="https://www.youtube.com/cccf23">
-                <i className="fa-brands fa-youtube"></i>
-              </a>
-            </div>
+    <div className="header-top-section-2">
+      <div className="container-fluid">
+        <div className="header-top-wrapper-2">
+          <div className="header-left">
+            <ul className="list-icon">
+              <li>
+                <i className="fa-regular fa-location-dot" />
+                {t("header.address")}
+              </li>
+              <li>
+                <i className="fa-solid fa-envelope" />
+                <a href={`mailto:${t("header.email")}`}>{t("header.email")}</a>
+              </li>
+              <li>
+                <i className="fa-solid fa-phone-volume" />
+                <a href={`tel:${t("header.phone")}`}>{t("header.phone")}</a>
+              </li>
+            </ul>
+          </div>
+          <div className="social-icon">
+            <a href="#">
+              <i className="fa-brands fa-twitter" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-whatsapp" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-instagram" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-youtube" />
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Offcanvas Area Start */}
-      <div className="fix-area">
-        <div className="offcanvas__info">
-          <div className="offcanvas__wrapper">
-            <div className="offcanvas__content">
-              <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                <div className="offcanvas__logo">
-                  <a href="index.html">
-                    <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
-                  </a>
-                </div>
-                <div className="offcanvas__close">
-                  <button>
-                    <i className="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-
-              {/* <p className="text d-none d-xl-block">
-                Nullam dignissim, ante scelerisque the is euismod fermentum odio
-                sem semper the is erat, a feugiat leo urna eget eros. Duis
-                Aenean a imperdiet risus.
-              </p> */}
-
-              <div className="mobile-menu fix mb-3"></div>
-
-              <div className="offcanvas__contact d-xl-block">
-                <h4 className="d-xl-block">Contact Info</h4>
-                <ul className="d-xl-block">
-                  <li className="d-flex align-items-center">
-                    <div className="offcanvas__contact-icon">
-                      <i className="fal fa-map-marker-alt"></i>
-                    </div>
-                    <div className="offcanvas__contact-text">
-                      <a target="_blank" rel="noreferrer" href="#">
-                        Dhaka, Bangladesh
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="d-flex align-items-center">
-                    <div className="offcanvas__contact-icon mr-15">
-                      <i className="fal fa-envelope"></i>
-                    </div>
-                    <div
-                      className="offcanvas__contact-text topMenuContactTextMobile"
-                      target="_blank"
-                    >
-                      <a
-                        target="_blank"
-                        href="mailto:cccbangladesh2023@gmail.com"
-                      >
-                        cccbangladesh2023@gmail.com
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="d-flex align-items-center">
-                    <div className="offcanvas__contact-icon mr-15">
-                      <i className="fal fa-clock"></i>
-                    </div>
-                    <div className="offcanvas__contact-text">
-                      <a target="_blank" rel="noreferrer" href="#">
-                        Always
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="d-flex align-items-center">
-                    <div className="offcanvas__contact-icon mr-15">
-                      <i className="far fa-phone"></i>
-                    </div>
-                    <div className="offcanvas__contact-text">
-                      <a href="tel:+880 1610-377725">+880 1610-377725</a>
-                    </div>
-                  </li>
-                </ul>
-
-                <div className="social-icon d-flex align-items-center">
-                  <a target="_blank" href="https://www.facebook.com/CCCBpage">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a target="_blank" href="https://www.youtube.com/cccf23">
-                    <i className="fab fa-youtube"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="offcanvas__overlay"></div>
     </div>
   );
 }

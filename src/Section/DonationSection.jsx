@@ -1,159 +1,121 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function DonationSection() {
+  const { t } = useTranslation();
+
+  const donations = [
+    {
+      id: 1,
+      image: "assets/img/home-1/donation/01.jpg",
+      itemKey: "donation.items.item1",
+      style: "",
+      delay: ".2s",
+    },
+    {
+      id: 2,
+      image: "assets/img/home-1/donation/02.jpg",
+      itemKey: "donation.items.item2",
+      style: "style-2",
+      delay: ".4s",
+    },
+    {
+      id: 3,
+      image: "assets/img/home-1/donation/03.jpg",
+      itemKey: "donation.items.item3",
+      style: "style-3",
+      delay: ".6s",
+    },
+    {
+      id: 4,
+      image: "assets/img/home-1/donation/04.jpg",
+      itemKey: "donation.items.item4",
+      style: "style-4",
+      delay: ".8s",
+    },
+  ];
+
   return (
-    <div>
-      {/* donation section start */}
-      <section className="donation-section section-padding fix">
-        <div className="container">
-          <div className="section-title-area">
-            <div className="section-title">
-              <span className="sub-title wow fadeInUp">Lets Start Donating</span>
-              <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                <span>S</span>ee You Impact Transparent <br /> Donation Causes
-              </h2>
-            </div>
-            <a href="donation.html" className="theme-btn">Learn More <i className="fa-solid fa-arrow-right-long" /></a>
+    <section className="donation-section section-padding fix">
+      <div className="container">
+        {/* Section Title */}
+        <div className="section-title-area">
+          <div className="section-title">
+            <span className="sub-title wow fadeInUp">
+              {t("donation.subTitle")}
+            </span>
+            <h2 className="wow fadeInUp" data-wow-delay=".3s">
+              <span>{t("donation.titleLetter")}</span>
+              {t("donation.titlePart1")} <br />
+              {t("donation.titlePart2")}
+            </h2>
           </div>
-          <div className="donation-wrapper">
-            <div className="row">
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
+
+          <Link to="/donation" className="theme-btn">
+            {t("donation.learnMore")}{" "}
+            <i className="fa-solid fa-arrow-right-long" />
+          </Link>
+        </div>
+
+        {/* Donation Cards */}
+        <div className="donation-wrapper">
+          <div className="row">
+            {donations.map((item) => (
+              <div
+                key={item.id}
+                className="col-lg-6 wow fadeInUp"
+                data-wow-delay={item.delay}
+              >
                 <div className="donation-card-item">
                   <div className="donation-image">
-                    <img src="assets/img/home-1/donation/01.jpg" alt="img" />
+                    <img src={item.image} alt="donation" />
                     <div className="right-shape">
-                      <img src="assets/img/home-1/donation/shape.png" alt="img" />
+                      <img
+                        src="assets/img/home-1/donation/shape.png"
+                        alt="shape"
+                      />
                     </div>
                   </div>
+
                   <div className="donation-content">
                     <h4>
-                      <a href="donation-details.html">Give African Children a Good Education</a>
+                      <Link to="/donation-details">
+                        {t(`${item.itemKey}.title`)}
+                      </Link>
                     </h4>
-                    <p>
-                      Looking for a restaurant that serves delicious, beautifully presented dishes with
-                      impeccable service.
-                    </p>
-                    <div className="pro-items">
+
+                    <p>{t(`${item.itemKey}.desc`)}</p>
+
+                    <div className={`pro-items ${item.style}`}>
                       <div className="progress">
                         <div className="progress-value style-two" />
                       </div>
                     </div>
+
                     <ul className="donate-list">
                       <li>
-                        <span>Goal :</span> $250,000
+                        <span>{t("donation.goal")} :</span> $250,000
                       </li>
                       <li>
-                        <span>Raised:</span> $500,000
+                        <span>{t("donation.raised")} :</span> $500,000
                       </li>
                     </ul>
-                    <a href="donation-details.html" className="theme-btn">Donte Now <i className="fa-solid fa-arrow-right-long" /></a>
+
+                    <Link
+                      to="/donation-details"
+                      className={`theme-btn ${item.style}`}
+                    >
+                      {t("donation.donateNow")}{" "}
+                      <i className="fa-solid fa-arrow-right-long" />
+                    </Link>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
-                <div className="donation-card-item">
-                  <div className="donation-image">
-                    <img src="assets/img/home-1/donation/02.jpg" alt="img" />
-                    <div className="right-shape">
-                      <img src="assets/img/home-1/donation/shape.png" alt="img" />
-                    </div>
-                  </div>
-                  <div className="donation-content">
-                    <h4>
-                      <a href="donation-details.html">Support Learning, Inspire Hope in Africa</a>
-                    </h4>
-                    <p>
-                      Looking for a restaurant that serves delicious, beautifully presented dishes with
-                      impeccable service.
-                    </p>
-                    <div className="pro-items style-2">
-                      <div className="progress">
-                        <div className="progress-value style-two" />
-                      </div>
-                    </div>
-                    <ul className="donate-list">
-                      <li>
-                        <span>Goal :</span> $250,000
-                      </li>
-                      <li>
-                        <span>Raised:</span> $500,000
-                      </li>
-                    </ul>
-                    <a href="donation-details.html" className="theme-btn style-2">Donte Now <i className="fa-solid fa-arrow-right-long" /></a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".6s">
-                <div className="donation-card-item">
-                  <div className="donation-image">
-                    <img src="assets/img/home-1/donation/03.jpg" alt="img" />
-                    <div className="right-shape">
-                      <img src="assets/img/home-1/donation/shape.png" alt="img" />
-                    </div>
-                  </div>
-                  <div className="donation-content">
-                    <h4>
-                      <a href="donation-details.html">Building Bright Futures With Every Lesson</a>
-                    </h4>
-                    <p>
-                      Looking for a restaurant that serves delicious, beautifully presented dishes with
-                      impeccable service.
-                    </p>
-                    <div className="pro-items style-3">
-                      <div className="progress">
-                        <div className="progress-value style-two" />
-                      </div>
-                    </div>
-                    <ul className="donate-list">
-                      <li>
-                        <span>Goal :</span> $250,000
-                      </li>
-                      <li>
-                        <span>Raised:</span> $500,000
-                      </li>
-                    </ul>
-                    <a href="donation-details.html" className="theme-btn style-3">Donte Now <i className="fa-solid fa-arrow-right-long" /></a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".8s">
-                <div className="donation-card-item">
-                  <div className="donation-image">
-                    <img src="assets/img/home-1/donation/04.jpg" alt="img" />
-                    <div className="right-shape">
-                      <img src="assets/img/home-1/donation/shape.png" alt="img" />
-                    </div>
-                  </div>
-                  <div className="donation-content">
-                    <h4>
-                      <a href="donation-details.html">Help Children Dream Bigger With Education</a>
-                    </h4>
-                    <p>
-                      Looking for a restaurant that serves delicious, beautifully presented dishes with
-                      impeccable service.
-                    </p>
-                    <div className="pro-items style-4">
-                      <div className="progress">
-                        <div className="progress-value style-two" />
-                      </div>
-                    </div>
-                    <ul className="donate-list">
-                      <li>
-                        <span>Goal :</span> $250,000
-                      </li>
-                      <li>
-                        <span>Raised:</span> $500,000
-                      </li>
-                    </ul>
-                    <a href="donation-details.html" className="theme-btn style-4">Donte Now <i className="fa-solid fa-arrow-right-long" /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
-    </div>
-
-  )
+      </div>
+    </section>
+  );
 }
