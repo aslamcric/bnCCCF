@@ -27,8 +27,8 @@
   },
   "header": {
     "address": "Dhaka, Bangladesh",
-    "email": "Support@example.com",
-    "phone": "+163 3654 7896",
+    "email": "cccbangladesh2023@gmail.com",
+    "phone": "+880 1610 377 725",
     "donate": "Donate Now",
     "search": "Search Here..."
   },
@@ -53,15 +53,23 @@
       "desc": "Ensuring access to clean and safe drinking water in remote areas."
     }
   },
+
   "about": {
     "subTitle": "About Us",
-    "title": "Our goal is to save more lives with your help.",
+    "titleLetter": "O",
+    "titlePart1": "ur goal is to save more lives",
+    "titlePart2": "with your help.",
+
     "description": "Overall, I cannot recommend The Gourmet Bistro highly enough. If you're looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further. I will definitely be returning.",
+
     "fundraisingTitle": "Fundraising",
     "fundraisingDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
+
     "donationTitle": "Donation Marketing",
     "donationDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
+
     "button": "More About Us",
+
     "name": "James Anderson",
     "designation": "Software Engineer"
   },
@@ -132,6 +140,57 @@
       },
       "item3": {
         "title": "Humanitarian Support for Underprivileged"
+      }
+    }
+  },
+
+  "team": {
+    "subTitle": "Team Members",
+    "titleLetter": "M",
+    "titlePart1": "eet The Optimistic",
+    "titlePart2": "Volunteer",
+    "members": {
+      "member1": {
+        "name": "Darrell Steward",
+        "designation": "Software Developer"
+      },
+      "member2": {
+        "name": "Courtney Henry",
+        "designation": "Software Developer"
+      },
+      "member3": {
+        "name": "Annette Black",
+        "designation": "Software Developer"
+      },
+      "member4": {
+        "name": "Kristin Watson",
+        "designation": "Software Developer"
+      }
+    }
+  },
+
+  "testimonial": {
+    "subTitle": "Testimonials",
+    "titleLetter": "W",
+    "titlePart1": "hat People Say About",
+    "titlePart2": "Charity",
+    "totalRaised": "Total raising money in this year >",
+    "amount": "$4,50,000",
+    "items": {
+      "item1": {
+        "text": "Overall, I cannot recommend The Gourmet Bistro highly enough. If you're looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further. I will definitely be returning soon to try more of their culinary delights.",
+        "name": "Jonny Ananta",
+        "designation": "Regular Customer’s"
+      },
+      "item2": {
+        "text": "The staff was amazing and the service exceptional. I enjoyed every bite of the meal, and the ambiance was perfect. Highly recommend!",
+        "name": "Anna Smith",
+        "designation": "Satisfied Donor"
+      },
+      "item3": {
+        "text": "A truly inspiring charity initiative. I am happy to support their cause and see the positive impact they bring to the community.",
+        "name": "Robert Johnson",
+        "designation": "Volunteer"
       }
     }
   },
