@@ -1,17 +1,28 @@
 {
+  "header": {
+    "address": "Dhaka, Bangladesh",
+    "email": "cccbangladesh2023@gmail.com",
+    "phone": "+880 1610 377 725",
+    "search": "Search here...",
+    "description": "We are dedicated to serving humanity and supporting the underprivileged in our society.",
+    "contact_info": "Contact Info",
+    "working_hours": "Mon-Friday, 09am - 05pm",
+    "donate": "Donate Now"
+  },
+
   "menu": {
     "home": "Home",
     "about": "About Us",
-    "pages": "Pages",
     "blog": "Blog",
     "contact": "Contact Us",
+    "pages": "Pages",
     "pagesMenu": {
       "cause": "Cause",
       "ourCause": "Our Cause",
       "causeDetails": "Cause Details",
       "volunteer": "Volunteer",
       "becomeVolunteer": "Become Volunteer",
-      "volunteerList": "Volunteer",
+      "volunteerList": "Volunteer List",
       "volunteerDetails": "Volunteer Details",
       "event": "Event",
       "ourEvent": "Our Event",
@@ -21,44 +32,59 @@
       "ourDonation": "Our Donation",
       "donationNow": "Donation Now",
       "donationDetails": "Donation Details",
-      "pricing": "Our Pricing",
-      "faq": "Our FAQ"
+      "pricing": "Pricing",
+      "faq": "FAQ"
     }
   },
-  "header": {
-    "address": "Dhaka, Bangladesh",
-    "email": "cccbangladesh2023@gmail.com",
-    "phone": "+880 1610 377 725",
-    "donate": "Donate Now",
-    "search": "Search Here..."
+
+  "homeHero": {
+    "slides": [
+      {
+        "subTitle": "Start Donating Poor People",
+        "title": "We Are Non Profit Charity Organization",
+        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
+        "btnJoin": "Join With Us",
+        "btnRead": "Read More"
+      },
+      {
+        "subTitle": "Start Donating Poor People",
+        "title": "We Are Non Profit Charity Organization",
+        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
+        "btnJoin": "Join With Us",
+        "btnRead": "Read More"
+      },
+      {
+        "subTitle": "Start Donating Poor People",
+        "title": "We Are Non Profit Charity Organization",
+        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
+        "btnJoin": "Join With Us",
+        "btnRead": "Read More"
+      }
+    ]
   },
-  "hero": {
-    "common": {
-      "joinBtn": "Join With Us",
-      "readMoreBtn": "Read More"
-    },
-    "slide1": {
-      "subTitle": "Start Donating Poor People",
-      "title": "We Are Non Profit Charity Organization",
-      "desc": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility."
-    },
-    "slide2": {
-      "subTitle": "Education for All",
-      "title": "Your Small Help Can Change Lives",
-      "desc": "We are working to ensure the right to education for underprivileged children."
-    },
-    "slide3": {
-      "subTitle": "Pure Water Project",
-      "title": "Safe Water for Every Human",
-      "desc": "Ensuring access to clean and safe drinking water in remote areas."
-    }
+
+  "aboutHero": {
+    "title": "About Us",
+    "home": "Home",
+    "currentPage": "About Us"
+  },
+
+  "blogHero": {
+    "title": "Blog List",
+    "home": "Home",
+    "currentPage": "Blog List"
+  },
+
+  "contactHero": {
+    "title": "Contact Us",
+    "home": "Home",
+    "currentPage": "Contact Us"
   },
 
   "about": {
     "subTitle": "About Us",
     "titleLetter": "O",
-    "titlePart1": "ur goal is to save more lives",
-    "titlePart2": "with your help.",
+    "titlePart1": "ur goal is to save more lives with your help",
     "description": "Overall, I cannot recommend our initiatives highly enough. If you're looking for a foundation that serves with transparency and impeccable dedication, look no further. I will definitely be returning.",
     "fundraisingTitle": "Fundraising",
     "fundraisingDesc": "Looking for a platform that serves transparently with impeccable service, look no further.",
@@ -325,6 +351,32 @@
       }
     ],
     "tags": ["fundraising", "charity", "donation", "water", "kids", "Education"]
+  },
+
+  "contactForm": {
+    "info": {
+      "phone": {
+        "label": "Phone No",
+        "num": "+880 1610 377 725"
+      },
+      "location": {
+        "label": "Location",
+        "address": "Dhaka, Bangladesh"
+      },
+      "email": {
+        "label": "Email Address",
+        "mail": "cccbangladesh2023@gmail.com"
+      }
+    },
+    "form": {
+      "title": "Fill Up The Form",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Enter Your Email",
+      "phonePlaceholder": "Phone Number",
+      "addressPlaceholder": "Your Address",
+      "messagePlaceholder": "Type your message",
+      "submitBtn": "Get A Quote"
+    }
   },
 
   "footer": {

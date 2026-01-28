@@ -23,7 +23,7 @@ export default function AboutSection() {
                     <span key={i18n.language}>{t("about.titleLetter")}</span>
                     {t("about.titlePart1")}
                     {i18n.language !== "en" && <br />}
-                    {t("about.titlePart2")}
+                    {/* {t("about.titlePart2")} */}
                   </h2>
                 </div>
 

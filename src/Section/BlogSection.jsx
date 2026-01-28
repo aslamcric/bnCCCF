@@ -12,7 +12,7 @@ export default function BlogSection() {
     <section className="news-standard-section section-padding fix">
       <div className="container">
         <div className="news-standard-wrapper">
-          <div className="row g-4">
+          <div className="row g-4 flex-column-reverse flex-lg-row">
             {/* Main Blog Posts */}
             <div className="col-lg-8 col-12">
               {Array.isArray(posts) &&

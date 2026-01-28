@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem("lang", lng);
+    if (window.innerWidth <= 991) {
+      window.location.reload();
+    }
   };
 
   return (
@@ -58,63 +56,37 @@ export default function Header() {
       </div>
 
       {/* Offcanvas Area Start */}
-      <div className={`fix-area ${isMenuOpen ? "opened" : ""}`}>
-        <div className={`offcanvas__info ${isMenuOpen ? "info-open" : ""}`}>
+      <div className="fix-area">
+        <div className="offcanvas__info">
           <div className="offcanvas__wrapper">
             <div className="offcanvas__content">
               <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                 <div className="offcanvas__logo">
-                  <a href="index.html">
-                    <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
-                  </a>
+                  <NavLink to="/">
+                    {/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
+                    <img src="assets/img/logo/logo.png" alt="logo-img" />
+                  </NavLink>
                 </div>
                 <div className="offcanvas__close">
-                  <button onClick={toggleMenu}>
+                  <button>
                     <i className="fas fa-times" />
                   </button>
                 </div>
               </div>
               <p className="text d-none d-xl-block">
-                Nullam dignissim, ante scelerisque the is euismod fermentum odio
-                sem semper the is erat, a feugiat leo urna eget eros. Duis
-                Aenean a imperdiet risus.
+                {t("header.description")}
               </p>
-              <div className="mobile-menu fix mb-3">
-                <nav>
-                  <ul>
-                    <li>
-                      <NavLink to="/" onClick={toggleMenu}>
-                        {t("menu.home")}
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/about-us" onClick={toggleMenu}>
-                        {t("menu.about")}
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/blog" onClick={toggleMenu}>
-                        {t("menu.blog")}
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/contact-us" onClick={toggleMenu}>
-                        {t("menu.contact")}
-                      </NavLink>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+              <div className="mobile-menu fix mb-3" />
               <div className="offcanvas__contact d-xl-block">
-                <h4 className="d-xl-block">Contact Info</h4>
+                <h4 className="d-xl-block">{t("header.contact_info")}</h4>
                 <ul className="d-xl-block">
                   <li className="d-flex align-items-center">
                     <div className="offcanvas__contact-icon">
                       <i className="fal fa-map-marker-alt" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a target="_blank" href="#">
-                        Main Street, Melbourne, Australia
+                      <a target="_blank" rel="noreferrer" href="#">
+                        {t("header.address")}
                       </a>
                     </div>
                   </li>
@@ -123,7 +95,9 @@ export default function Header() {
                       <i className="fal fa-envelope" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="mailto:info@example.com">info@example.com</a>
+                      <a href={`mailto:${t("header.email")}`}>
+                        {t("header.email")}
+                      </a>
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
@@ -132,7 +106,7 @@ export default function Header() {
                     </div>
                     <div className="offcanvas__contact-text">
                       <a target="_blank" href="#">
-                        Mod-friday, 09am -05pm
+                        {t("header.working_hours")}
                       </a>
                     </div>
                   </li>
@@ -141,7 +115,9 @@ export default function Header() {
                       <i className="far fa-phone" />
                     </div>
                     <div className="offcanvas__contact-text">
-                      <a href="tel:+11002345909">+11002345909</a>
+                      <a href={`tel:${t("header.phone")}`}>
+                        {t("header.phone")}
+                      </a>
                     </div>
                   </li>
                 </ul>
@@ -164,11 +140,9 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div
-        className={`offcanvas__overlay ${isMenuOpen ? "overlay-open" : ""}`}
-        onClick={toggleMenu}
-      />
+      <div className="offcanvas__overlay" />
 
+      {/* Main Header Start */}
       <header id="header-sticky" className="header-1 header-2 header-3">
         <div className="container-fluid">
           <div className="mega-menu-wrapper">
@@ -176,7 +150,8 @@ export default function Header() {
               <div className="header-left">
                 <div className="logo">
                   <NavLink to="/" className="header-logo">
-                    <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                    {/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
+                    <img src="assets/img/logo/Logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
               </div>
@@ -198,7 +173,6 @@ export default function Header() {
                       <li>
                         <NavLink
                           to="/about-us"
-                          onClick={toggleMenu}
                           className={({ isActive }) =>
                             isActive ? "active" : ""
                           }
@@ -208,111 +182,104 @@ export default function Header() {
                       </li>
                       <li className="has-dropdown">
                         <Link to="#">{t("menu.pages")}</Link>
-
                         <ul className="submenu">
                           <li className="has-dropdown">
-                            <a href="project-details.html">
+                            <Link to="#">
                               {t("menu.pagesMenu.cause")}
                               <i className="fas fa-angle-right" />
-                            </a>
+                            </Link>
                             <ul className="submenu">
                               <li>
-                                <a href="project.html">
+                                <Link to="/project">
                                   {t("menu.pagesMenu.ourCause")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="project-details.html">
+                                <Link to="/project-details">
                                   {t("menu.pagesMenu.causeDetails")}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </li>
-
                           <li className="has-dropdown">
-                            <a href="volounteer-details.html">
+                            <Link to="#">
                               {t("menu.pagesMenu.volunteer")}
                               <i className="fas fa-angle-right" />
-                            </a>
+                            </Link>
                             <ul className="submenu">
                               <li>
-                                <a href="become-volounteer.html">
+                                <Link to="/become-volounteer">
                                   {t("menu.pagesMenu.becomeVolunteer")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="volounteer.html">
+                                <Link to="/volounteer">
                                   {t("menu.pagesMenu.volunteerList")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="volounteer-details.html">
+                                <Link to="/volounteer-details">
                                   {t("menu.pagesMenu.volunteerDetails")}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </li>
-
                           <li className="has-dropdown">
-                            <a href="event-details.html">
+                            <Link to="#">
                               {t("menu.pagesMenu.event")}
                               <i className="fas fa-angle-right" />
-                            </a>
+                            </Link>
                             <ul className="submenu">
                               <li>
-                                <a href="event.html">
+                                <Link to="/event">
                                   {t("menu.pagesMenu.ourEvent")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="event-list.html">
+                                <Link to="/event-list">
                                   {t("menu.pagesMenu.eventList")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="event-details.html">
+                                <Link to="/event-details">
                                   {t("menu.pagesMenu.eventDetails")}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </li>
-
                           <li className="has-dropdown">
-                            <a href="donation-details.html">
+                            <Link to="#">
                               {t("menu.pagesMenu.donation")}
                               <i className="fas fa-angle-right" />
-                            </a>
+                            </Link>
                             <ul className="submenu">
                               <li>
-                                <a href="donation.html">
+                                <Link to="/donation">
                                   {t("menu.pagesMenu.ourDonation")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="donation-now.html">
+                                <Link to="/donation-now">
                                   {t("menu.pagesMenu.donationNow")}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="donation-details.html">
+                                <Link to="/donation-details">
                                   {t("menu.pagesMenu.donationDetails")}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </li>
-
                           <li>
-                            <a href="pricing.html">
+                            <Link to="/pricing">
                               {t("menu.pagesMenu.pricing")}
-                            </a>
+                            </Link>
                           </li>
-
                           <li>
-                            <a href="faq.html">{t("menu.pagesMenu.faq")}</a>
+                            <Link to="/faq">{t("menu.pagesMenu.faq")}</Link>
                           </li>
                         </ul>
                       </li>
-
                       <li>
                         <NavLink
                           to="/blog"
@@ -343,42 +310,30 @@ export default function Header() {
                   <i className="fa-regular fa-magnifying-glass" />
                 </a>
 
-                {/* <div className="header-button" style={{ marginLeft: '15px' }}>
-                                    <div className="dropdown">
-                                        <button className="theme-btn dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" style={{ padding: '10px 20px', fontSize: '14px' }}>
-                                            <i className="fa-solid fa-globe mr-2"></i> {i18n.language === 'en' ? 'English' : 'বাংলা'}
-                                        </button>
-                                        <ul className="dropdown-menu shadow" aria-labelledby="langDropdown">
-                                            <li>
-                                                <button className="dropdown-item" onClick={() => changeLanguage('en')}>
-                                                    English
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button className="dropdown-item" onClick={() => changeLanguage('bn')}>
-                                                    বাংলা
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> */}
-
+                {/* ল্যাঙ্গুয়েজ বাটন - ডেস্কটপে পূর্ণ নাম এবং মোবাইলে BN/EN দেখাবে */}
                 <div className="header-button" style={{ marginLeft: "15px" }}>
                   <button
                     className="theme-btn"
-                    style={{ padding: "10px 16px", fontSize: "14px" }}
+                    style={{
+                      padding: "10px 16px",
+                      fontSize: "14px",
+                      minWidth: "60px",
+                    }}
                     onClick={() =>
                       changeLanguage(i18n.language === "en" ? "bn" : "en")
                     }
                   >
-                    <i className="fa-solid fa-globe mr-2"></i>
-                    {i18n.language === "en" ? " বাংলা" : " English"}
+                    <i className="fa-solid fa-globe mr-1"></i>
+                    <span className="d-none d-md-inline">
+                      {i18n.language === "en" ? " বাংলা" : " English"}
+                    </span>
+                    <span className="d-md-none">
+                      {i18n.language === "en" ? " BN" : " EN"}
+                    </span>
                   </button>
                 </div>
-                <div
-                  className="header__hamburger d-xl-none my-auto"
-                  onClick={toggleMenu}
-                >
+
+                <div className="header__hamburger d-xl-none my-auto">
                   <div className="sidebar__toggle">
                     <i className="fas fa-bars" />
                   </div>

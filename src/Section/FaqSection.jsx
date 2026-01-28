@@ -10,7 +10,9 @@ export default function FaqSection() {
     <section className="faq-section section-padding fix">
       <div className="container">
         <div className="faq-wrapper">
-          <div className="row g-4 align-items-center">
+          {/* <div className="row g-4 align-items-center"> */}
+          {/* <div className="row g-4 align-items-center flex-column-reverse flex-lg-row"> */}
+          <div className="row g-4 align-items-center flex-column-reverse flex-lg-row">
             <div className="col-lg-6">
               <div className="faq-items">
                 <div className="accordion" id="accordionExample">

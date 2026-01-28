@@ -1,53 +1,67 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactFormSection() {
+  const { t } = useTranslation();
+
   return (
     <div className="contact-us-section-2 section-padding fix">
       <div className="container">
         <div className="contact-us-wrapper-2">
           <div className="row g-4">
             <div className="col-lg-4">
+              {/* Phone Info Box */}
               <div className="contact-us-box">
                 <div className="icon">
                   <i className="fa-solid fa-phone" />
                 </div>
                 <div className="contact-us-content">
-                  <span>Phone No</span>
+                  <span>{t("contactForm.info.phone.label")}</span>
                   <h5>
-                    <a href="tel:+13685678954">+1 368 567 89 54</a> <br />
-                    <a href="tel:+23645689622">+236 456 896 22</a>
+                    <a href={`tel:${t("contactForm.info.phone.num1")}`}>
+                      {t("contactForm.info.phone.num")}
+                    </a>
                   </h5>
                 </div>
               </div>
+
+              {/* Location Info Box */}
               <div className="contact-us-box">
                 <div className="icon">
                   <i className="fa-solid fa-location-dot" />
                 </div>
                 <div className="contact-us-content">
-                  <span>Location</span>
-                  <h5>
-                    7th Floor, 1350 Lexington <br /> New York, NY 10028, USA
-                  </h5>
+                  <span>{t("contactForm.info.location.label")}</span>
+                  <h5>{t("contactForm.info.location.address")}</h5>
                 </div>
               </div>
+
+              {/* Email Info Box */}
               <div className="contact-us-box mb-0">
                 <div className="icon">
                   <i className="fa-solid fa-square-chevron-down" />
                 </div>
                 <div className="contact-us-content">
-                  <span>Email Address</span>
+                  <span>{t("contactForm.info.email.label")}</span>
                   <h5>
-                    <a href="mailto:example@email.com">example@email.com</a>{" "}
-                    <br />
-                    <a href="mailto:hridoytb@email.com">hridoytb@email.com</a>
+                    <a href={`mailto:${t("contactForm.info.email.mail1")}`}>
+                      {t("contactForm.info.email.mail")}
+                    </a>
                   </h5>
                 </div>
               </div>
             </div>
+
+            {/* Contact Form Area */}
             <div className="col-lg-8">
               <div className="from-fill-up-box">
-                <h4>Fill Up The From</h4>
-                <form action="#" id="contact-form" method="POST">
+                <h4>{t("contactForm.form.title")}</h4>
+                <form
+                  action="#"
+                  id="contact-form"
+                  method="POST"
+                  onSubmit={(e) => e.preventDefault()}
+                >
                   <div className="row g-4">
                     <div className="col-lg-12">
                       <div className="form-clt">
@@ -55,7 +69,7 @@ export default function ContactFormSection() {
                           type="text"
                           name="name"
                           id="name2"
-                          placeholder="Your Name"
+                          placeholder={t("contactForm.form.namePlaceholder")}
                         />
                       </div>
                     </div>
@@ -65,7 +79,7 @@ export default function ContactFormSection() {
                           type="text"
                           name="email"
                           id="email"
-                          placeholder="Enter Your Email"
+                          placeholder={t("contactForm.form.emailPlaceholder")}
                         />
                       </div>
                     </div>
@@ -75,7 +89,7 @@ export default function ContactFormSection() {
                           type="text"
                           name="number"
                           id="number"
-                          placeholder="Phone Number"
+                          placeholder={t("contactForm.form.phonePlaceholder")}
                         />
                       </div>
                     </div>
@@ -85,7 +99,7 @@ export default function ContactFormSection() {
                           type="text"
                           name="address"
                           id="address"
-                          placeholder="Your Address"
+                          placeholder={t("contactForm.form.addressPlaceholder")}
                         />
                       </div>
                     </div>
@@ -94,14 +108,14 @@ export default function ContactFormSection() {
                         <textarea
                           name="message"
                           id="message"
-                          placeholder="Type your message"
+                          placeholder={t("contactForm.form.messagePlaceholder")}
                           defaultValue={""}
                         />
                       </div>
                     </div>
                     <div className="col-lg-6">
-                      <button type="submit" className="theme-btn ">
-                        Get A Quote{" "}
+                      <button type="submit" className="theme-btn">
+                        {t("contactForm.form.submitBtn")}{" "}
                         <i className="fa-solid fa-arrow-right-long" />
                       </button>
                     </div>

@@ -6,28 +6,26 @@ import { useInView } from "react-intersection-observer";
 export default function CounterSection() {
   const { t } = useTranslation();
 
+  // triggerOnce: false রাখা হয়েছে যাতে প্রতিবার স্ক্রল করলে কাজ করে
   const { ref, inView } = useInView({
-    // triggerOnce: true,
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (
     <div className="counter-section fix section-bg-1" ref={ref}>
       <div className="right-shape">
-        <img src="assets/img/home-1/feature/shape-2.png" alt="shape" />
+        <img src="assets/img/home-1/feature/shape-2.png" alt="img" />
       </div>
       <div className="container">
         <div className="counter-wrapper">
           <div className="row g-4 align-items-center">
-            <div className="col-lg-6">
+            {/* Image Section */}
+            <div className="col-lg-6 wow fadeInLeft" data-wow-delay=".3s">
               <div className="counter-image">
-                <img src="assets/img/home-1/feature/01.jpg" alt="counter" />
+                <img src="assets/img/home-1/feature/01.jpg" alt="img" />
                 <div className="shape">
-                  <img
-                    src="assets/img/home-1/feature/shape-1.png"
-                    alt="shape"
-                  />
+                  <img src="assets/img/home-1/feature/shape-1.png" alt="img" />
                 </div>
               </div>
             </div>
@@ -49,54 +47,50 @@ export default function CounterSection() {
                 </p>
 
                 <div className="counter-main-item">
+                  {/* Row 1 */}
                   <div
                     className="counter-item wow fadeInUp"
                     data-wow-delay=".7s"
                   >
-                    {/* Item 1: Team Support */}
                     <div className="content style-2">
                       <h2>
-                        <span className="count">
-                          {inView ? <CountUp end={35} duration={3} /> : "0"}
-                        </span>
+                        <CountUp start={0} end={inView ? 35 : 0} duration={2} />
                         k
                       </h2>
                       <p>{t("counter.stats.teamSupport")}</p>
                     </div>
-
-                    {/* Item 2: Successful Campaigns */}
                     <div className="content">
                       <h2>
-                        <span className="count">
-                          {inView ? <CountUp end={100} duration={3} /> : "0"}
-                        </span>
+                        <CountUp
+                          start={0}
+                          end={inView ? 100 : 0}
+                          duration={2}
+                        />
                         +
                       </h2>
                       <p>{t("counter.stats.successfulCampaigns")}</p>
                     </div>
                   </div>
 
+                  {/* Row 2 */}
                   <div
                     className="counter-item style-border wow fadeInUp"
                     data-wow-delay=".9s"
                   >
-                    {/* Item 3: Volunteers */}
                     <div className="content">
                       <h2>
-                        <span className="count">
-                          {inView ? <CountUp end={15} duration={3} /> : "0"}
-                        </span>
+                        <CountUp start={0} end={inView ? 15 : 0} duration={2} />
                         k+
                       </h2>
                       <p>{t("counter.stats.incredibleVolunteers")}</p>
                     </div>
-
-                    {/* Item 4: Monthly Donors */}
                     <div className="content style-2">
                       <h2>
-                        <span className="count">
-                          {inView ? <CountUp end={400} duration={3} /> : "0"}
-                        </span>
+                        <CountUp
+                          start={0}
+                          end={inView ? 400 : 0}
+                          duration={2}
+                        />
                         +
                       </h2>
                       <p>{t("counter.stats.monthlyDonors")}</p>

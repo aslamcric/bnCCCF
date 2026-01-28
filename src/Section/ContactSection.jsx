@@ -22,7 +22,8 @@ export default function ContactSection() {
               <div className="contact-content">
                 <div className="logo-image">
                   <a href="index.html">
-                    <img src="assets/img/logo/white-logo.svg" alt="logo" />
+                    {/* <img src="assets/img/logo/white-logo.svg" alt="logo" /> */}
+                    <img src="assets/img/logo/logo.png" alt="logo" />
                   </a>
                 </div>
                 <div className="section-title mb-0">
