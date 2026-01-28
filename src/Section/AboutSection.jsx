@@ -19,7 +19,8 @@ export default function AboutSection() {
                   </span>
 
                   <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                    <span>{t("about.titleLetter")}</span>
+                    {/* key ব্যবহার করা হয়েছে যাতে ভাষা বদলালে রেন্ডারিং ঠিক থাকে */}
+                    <span key={i18n.language}>{t("about.titleLetter")}</span>
                     {t("about.titlePart1")}
                     {i18n.language !== "en" && <br />}
                     {t("about.titlePart2")}
@@ -31,9 +32,12 @@ export default function AboutSection() {
                 </p>
 
                 {/* Fundraising */}
-                <div className="about-icon-item wow fadeInUp" data-wow-delay=".3s">
+                <div
+                  className="about-icon-item wow fadeInUp"
+                  data-wow-delay=".3s"
+                >
                   <div className="icon">
-                    <img src="assets/img/home-1/icon/01.svg" alt="icon" />
+                    <img src="/assets/img/home-1/icon/01.svg" alt="icon" />
                   </div>
                   <div className="content">
                     <h4>{t("about.fundraisingTitle")}</h4>
@@ -42,9 +46,12 @@ export default function AboutSection() {
                 </div>
 
                 {/* Donation Marketing */}
-                <div className="about-icon-item mb-0 wow fadeInUp" data-wow-delay=".5s">
+                <div
+                  className="about-icon-item mb-0 wow fadeInUp"
+                  data-wow-delay=".5s"
+                >
                   <div className="icon">
-                    <img src="assets/img/home-1/icon/02.svg" alt="icon" />
+                    <img src="/assets/img/home-1/icon/02.svg" alt="icon" />
                   </div>
                   <div className="content">
                     <h4>{t("about.donationTitle")}</h4>
@@ -62,7 +69,7 @@ export default function AboutSection() {
                   <div className="info-item">
                     <div className="client-image">
                       <img
-                        src="assets/img/home-1/about/client.png"
+                        src="/assets/img/home-1/about/client.png"
                         alt="client"
                       />
                     </div>
@@ -80,21 +87,18 @@ export default function AboutSection() {
               <div className="about-item">
                 <div className="about-image">
                   <img
-                    src="assets/img/home-1/about/about-3.jpg"
+                    src="/assets/img/home-1/about/about-3.jpg"
                     alt="img"
                     className="wow img-custom-anim-right"
                     data-wow-duration="1.3s"
                     data-wow-delay="0.3s"
                   />
                   <div className="shape">
-                    <img
-                      src="assets/img/home-1/about/shape.png"
-                      alt="shape"
-                    />
+                    <img src="/assets/img/home-1/about/shape.png" alt="shape" />
                   </div>
                   <div className="about-image-2">
                     <img
-                      src="assets/img/home-1/about/about-1.jpg"
+                      src="/assets/img/home-1/about/about-1.jpg"
                       alt="img"
                       className="wow img-custom-anim-left"
                       data-wow-duration="1.3s"
@@ -103,7 +107,7 @@ export default function AboutSection() {
                   </div>
                   <div className="about-image-3">
                     <img
-                      src="assets/img/home-1/about/about-2.png"
+                      src="/assets/img/home-1/about/about-2.png"
                       alt="img"
                       className="wow img-custom-anim-left"
                       data-wow-duration="1.3s"
@@ -113,7 +117,6 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-            {/* End */}
           </div>
         </div>
       </div>

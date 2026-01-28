@@ -59,17 +59,12 @@
     "titleLetter": "O",
     "titlePart1": "ur goal is to save more lives",
     "titlePart2": "with your help.",
-
-    "description": "Overall, I cannot recommend The Gourmet Bistro highly enough. If you're looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further. I will definitely be returning.",
-
+    "description": "Overall, I cannot recommend our initiatives highly enough. If you're looking for a foundation that serves with transparency and impeccable dedication, look no further. I will definitely be returning.",
     "fundraisingTitle": "Fundraising",
-    "fundraisingDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
-
+    "fundraisingDesc": "Looking for a platform that serves transparently with impeccable service, look no further.",
     "donationTitle": "Donation Marketing",
-    "donationDesc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further.",
-
+    "donationDesc": "Looking for a platform that serves transparently with impeccable service, look no further.",
     "button": "More About Us",
-
     "name": "James Anderson",
     "designation": "Software Engineer"
   },
@@ -147,8 +142,7 @@
   "team": {
     "subTitle": "Team Members",
     "titleLetter": "M",
-    "titlePart1": "eet The Optimistic",
-    "titlePart2": "Volunteer",
+    "titlePart1": "eet The Optimistic Volunteer",
     "members": {
       "member1": {
         "name": "Darrell Steward",
@@ -172,8 +166,7 @@
   "testimonial": {
     "subTitle": "Testimonials",
     "titleLetter": "W",
-    "titlePart1": "hat People Say About",
-    "titlePart2": "Charity",
+    "titlePart1": "hat People Say About Charity",
     "totalRaised": "Total raising money in this year >",
     "amount": "$4,50,000",
     "items": {
@@ -193,6 +186,145 @@
         "designation": "Volunteer"
       }
     }
+  },
+
+  "counter": {
+    "subTitle": "Numbers",
+    "titleLetter": "W",
+    "titlePart1": "e Always Help The Needy People",
+    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in making a difference.",
+    "stats": {
+      "teamSupport": "Team Support",
+      "successfulCampaigns": "Successful Campaigns",
+      "incredibleVolunteers": "Incredible Volunteers",
+      "monthlyDonors": "Monthly Donors"
+    }
+  },
+
+  "faq": {
+    "subTitle": "Our Faq",
+    "titleLetter": "E",
+    "titlePart": "xplore our FAQs for quick and helpful guidance",
+    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society. It reminds us of the can make it your significant difference in someone's life.",
+    "questions": [
+      {
+        "id": "Two",
+        "question": "What Is Charity, And Why Is It Important?",
+        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "expanded": false
+      },
+      {
+        "id": "One",
+        "question": "How Can I Get Involved In Charity Work?",
+        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "expanded": false
+      },
+      {
+        "id": "three",
+        "question": "Dedication for charitable Donations?",
+        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "expanded": false
+      },
+      {
+        "id": "four",
+        "question": "My Donations Are Going To a Charity?",
+        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "expanded": false
+      },
+      {
+        "id": "five",
+        "question": "Is my donation actually being put to use?",
+        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "expanded": false
+      }
+    ]
+  },
+
+  "newsSection": {
+    "subTitle": "bLOG & nEWS",
+    "titleLetter": "I",
+    "titlePart": "nsights from latest blog",
+    "readMore": "Read More",
+    "authorLabel": "By : Admin",
+    "commentLabel": "By : Comment",
+    "newsList": [
+      {
+        "image": "assets/img/home-1/news/01.jpg",
+        "title": "How Education Can Transform a Child’s Future.",
+        "delay": ".3s"
+      },
+      {
+        "image": "assets/img/home-1/news/02.jpg",
+        "title": "How Education Can Transform a Child’s Future.",
+        "delay": ".5s"
+      },
+      {
+        "image": "assets/img/home-1/news/03.jpg",
+        "title": "How Education Can Transform a Child’s Future.",
+        "delay": ".7s"
+      }
+    ]
+  },
+
+  "contactSection": {
+    "titleLetter": "A",
+    "titlePart": "lways open to more people who what to support easts other",
+    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society It reminds us of the can make it.",
+    "btnText": "Explore More",
+    "callLabel": "Call :",
+    "phoneNumber": "+880 1670 377 725"
+  },
+
+  "blog": {
+    "btnText": "More About Us",
+    "sidebar": {
+      "search": "Search",
+      "searchPlaceholder": "Search here",
+      "categories": "Categories",
+      "recentPost": "Recent Post",
+      "tagCloud": "Tag Cloud"
+    },
+    "posts": [
+      {
+        "img": "assets/img/home-1/news/08.jpg",
+        "date": "11 March 2025",
+        "comments": "19 Comments",
+        "title": "How Education Can Transform a Child’s Future.",
+        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
+      },
+      {
+        "img": "assets/img/home-1/news/09.jpg",
+        "date": "11 March 2025",
+        "comments": "19 Comments",
+        "title": "Lighting the Path: How Learning Shapes a Child’s Destiny",
+        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
+      },
+      {
+        "img": "assets/img/home-1/news/10.jpg",
+        "date": "11 March 2025",
+        "comments": "19 Comments",
+        "title": "Turning Possibility into Progress Through Education",
+        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
+      }
+    ],
+    "recentPosts": [
+      {
+        "img": "assets/img/inner-page/news-details/post-1.jpg",
+        "title": "Where Creativity Meets Commitment",
+        "date": "March 26, 2025"
+      },
+      {
+        "img": "assets/img/inner-page/news-details/post-2.jpg",
+        "title": "Where Innovation Meets Foundation",
+        "date": "March 26, 2025"
+      },
+      {
+        "img": "assets/img/inner-page/news-details/post-3.jpg",
+        "title": "Structures That Stand Dreams That Soar",
+        "date": "March 26, 2025"
+      }
+    ],
+    "tags": ["fundraising", "charity", "donation", "water", "kids", "Education"]
   },
 
   "footer": {

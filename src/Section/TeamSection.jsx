@@ -19,7 +19,7 @@ export default function TeamSection() {
             <span className="sub-title wow fadeInUp">{t("team.subTitle")}</span>
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
               <span>{t("team.titleLetter")}</span>
-              {t("team.titlePart1")} <br /> {t("team.titlePart2")}
+              {t("team.titlePart1")}
             </h2>
           </div>
 
@@ -42,17 +42,24 @@ export default function TeamSection() {
                     </h5>
                     <p>{t(`team.members.${member.key}.designation`)}</p>
                     <div className="social-icon">
-                      <a href="#"><i className="fa-brands fa-twitter" /></a>
-                      <a href="#"><i className="fa-brands fa-whatsapp" /></a>
-                      <a href="#"><i className="fa-brands fa-instagram" /></a>
-                      <a href="#"><i className="fas fa-paper-plane" /></a>
+                      <a href="#">
+                        <i className="fa-brands fa-twitter" />
+                      </a>
+                      <a href="#">
+                        <i className="fa-brands fa-whatsapp" />
+                      </a>
+                      <a href="#">
+                        <i className="fa-brands fa-instagram" />
+                      </a>
+                      <a href="#">
+                        <i className="fas fa-paper-plane" />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </section>
     </div>

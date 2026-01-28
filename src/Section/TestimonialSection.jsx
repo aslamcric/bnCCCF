@@ -26,8 +26,7 @@ export default function TestimonialSection() {
           </span>
           <h2 className="wow fadeInUp" data-wow-delay=".3s">
             <span>{t("testimonial.titleLetter")}</span>
-            {t("testimonial.titlePart1")} <br />
-            {t("testimonial.titlePart2")}
+            {t("testimonial.titlePart1")}
           </h2>
         </div>
 
