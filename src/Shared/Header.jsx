@@ -151,7 +151,7 @@ export default function Header() {
                 <div className="logo">
                   <NavLink to="/" className="header-logo">
                     {/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
-                    <img src="assets/img/logo/Logo.png" alt="logo-img" />
+                    <img src="assets/img/logo/logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
               </div>
