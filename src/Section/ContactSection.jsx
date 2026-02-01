@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 export default function ContactSection() {
   const { t } = useTranslation();
@@ -21,10 +22,9 @@ export default function ContactSection() {
             <div className="col-lg-6">
               <div className="contact-content">
                 <div className="logo-image">
-                  <a href="index.html">
-                    {/* <img src="assets/img/logo/white-logo.svg" alt="logo" /> */}
-                    <img src="assets/img/logo/logo.png" alt="logo" />
-                  </a>
+                  <NavLink to="/">
+                    <img src="assets/img/logo/logo.png" alt="logo-img" />
+                  </NavLink>
                 </div>
                 <div className="section-title mb-0">
                   <h2 className="sec-title text-white">

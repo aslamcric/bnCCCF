@@ -63,7 +63,6 @@ export default function Header() {
               <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                 <div className="offcanvas__logo">
                   <NavLink to="/">
-                    {/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
                     <img src="assets/img/logo/logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
@@ -150,7 +149,6 @@ export default function Header() {
               <div className="header-left">
                 <div className="logo">
                   <NavLink to="/" className="header-logo">
-                    {/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
                     <img src="assets/img/logo/logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
