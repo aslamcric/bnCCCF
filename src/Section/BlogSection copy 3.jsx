@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,6 @@ export default function BlogSection() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchType, setSearchType] = useState("text"); // 'text', 'category', 'tag'
   const postsPerPage = 3;
 
   const currentLang = i18n.language?.split("-")[0]?.toLowerCase() || "en";
@@ -35,25 +34,11 @@ export default function BlogSection() {
       });
   }, []);
 
-  // Flatten all posts with category info
-  const allPostsWithCategory = useMemo(() => {
-    const posts = [];
-    categories.forEach((cat) => {
-      if (cat.posts && Array.isArray(cat.posts)) {
-        cat.posts.forEach((post) => {
-          posts.push({
-            ...post,
-            category_name: cat.name,
-            category_id: cat.id,
-          });
-        });
-      }
-    });
-    return posts;
-  }, [categories]);
+  // Flatten all posts
+  const allPosts = categories.flatMap((cat) => cat.posts || []);
 
   // Filter by language
-  const filteredPosts = allPostsWithCategory.filter((post) => {
+  const filteredPosts = allPosts.filter((post) => {
     const postLang = post.language
       ? String(post.language).toLowerCase().trim()
       : "";
@@ -65,30 +50,13 @@ export default function BlogSection() {
     (id) => filteredPosts.find((p) => p.id === id),
   );
 
-  // Search filter based on searchType
+  // Search filter
   const searchedPosts = uniquePosts.filter((post) => {
-    if (searchTerm === "") return true;
-
     const searchLower = searchTerm.toLowerCase();
-
-    if (searchType === "category") {
-      // ক্যাটাগরি দিয়ে সার্চ
-      return post.category_name?.toLowerCase().includes(searchLower);
-    } else if (searchType === "tag") {
-      // ট্যাগ দিয়ে সার্চ
-      if (post.tags && Array.isArray(post.tags)) {
-        return post.tags.some((tag) =>
-          tag.name?.toLowerCase().includes(searchLower),
-        );
-      }
-      return false;
-    } else {
-      // সাধারণ টেক্সট সার্চ (টাইটেল, সাবটাইটেল, বডি)
-      const titleMatch = post.title?.toLowerCase().includes(searchLower);
-      const descMatch = post.sub_title?.toLowerCase().includes(searchLower);
-      const contentMatch = post.body?.toLowerCase().includes(searchLower);
-      return titleMatch || descMatch || contentMatch;
-    }
+    const titleMatch = post.title?.toLowerCase().includes(searchLower);
+    const descMatch = post.sub_title?.toLowerCase().includes(searchLower);
+    const contentMatch = post.body?.toLowerCase().includes(searchLower);
+    return titleMatch || descMatch || contentMatch;
   });
 
   // Sort posts by created_at in descending order (newest first)
@@ -99,11 +67,11 @@ export default function BlogSection() {
   // Get recent posts (last 3) from sorted posts
   const recentPosts = sortedPosts.slice(0, 3);
 
-  // Get all tags with counts
-  const allTags = useMemo(() => {
+  // Get all tags from sorted posts (if available in API)
+  const allTags = React.useMemo(() => {
     const tagCount = new Map();
 
-    uniquePosts.forEach((post) => {
+    sortedPosts.forEach((post) => {
       if (post.tags && Array.isArray(post.tags)) {
         post.tags.forEach((tag) => {
           if (tag.name) {
@@ -115,10 +83,10 @@ export default function BlogSection() {
 
     // কাউন্ট অনুযায়ী সাজিয়ে প্রথম ৮টি নেওয়া
     return Array.from(tagCount.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 8)
+      .sort((a, b) => b[1] - a[1]) // বেশি কাউন্ট যাদের
+      .slice(0, 8) // প্রথম ৮টি
       .map(([tagName]) => tagName);
-  }, [uniquePosts]);
+  }, [sortedPosts]);
 
   // Get categories with counts
   const categoriesWithCount = categories.map((cat) => {
@@ -130,6 +98,7 @@ export default function BlogSection() {
         return postLang === currentLang;
       }).length || 0;
 
+    // ভাষা অনুযায়ী কাউন্ট দেখাও
     const displayCount =
       count === 0
         ? currentLang === "bn"
@@ -175,25 +144,11 @@ export default function BlogSection() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setSearchType("text");
     setCurrentPage(1);
   };
 
   const handleSearchInput = (e) => {
     setSearchTerm(e.target.value);
-    setSearchType("text");
-    setCurrentPage(1);
-  };
-
-  const handleCategorySearch = (categoryName) => {
-    setSearchTerm(categoryName);
-    setSearchType("category");
-    setCurrentPage(1);
-  };
-
-  const handleTagSearch = (tagName) => {
-    setSearchTerm(tagName);
-    setSearchType("tag");
     setCurrentPage(1);
   };
 
@@ -355,7 +310,8 @@ export default function BlogSection() {
                             href="#"
                             onClick={(e) => {
                               e.preventDefault();
-                              handleCategorySearch(cat.name);
+                              setSearchTerm(cat.name);
+                              setCurrentPage(1);
                             }}
                           >
                             {cat.name}
@@ -413,7 +369,8 @@ export default function BlogSection() {
                             key={idx}
                             onClick={(e) => {
                               e.preventDefault();
-                              handleTagSearch(tag);
+                              setSearchTerm(tag);
+                              setCurrentPage(1);
                             }}
                           >
                             {tag}
