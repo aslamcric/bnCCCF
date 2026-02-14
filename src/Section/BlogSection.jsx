@@ -68,7 +68,25 @@ export default function BlogSection() {
   const recentPosts = sortedPosts.slice(0, 3);
 
   // Get all tags from sorted posts (if available in API)
-  const allTags = [...new Set(sortedPosts.flatMap((post) => post.tags || []))];
+  const allTags = React.useMemo(() => {
+    const tagCount = new Map();
+
+    sortedPosts.forEach((post) => {
+      if (post.tags && Array.isArray(post.tags)) {
+        post.tags.forEach((tag) => {
+          if (tag.name) {
+            tagCount.set(tag.name, (tagCount.get(tag.name) || 0) + 1);
+          }
+        });
+      }
+    });
+
+    // কাউন্ট অনুযায়ী সাজিয়ে প্রথম ৮টি নেওয়া
+    return Array.from(tagCount.entries())
+      .sort((a, b) => b[1] - a[1]) // বেশি কাউন্ট যাদের
+      .slice(0, 8) // প্রথম ৮টি
+      .map(([tagName]) => tagName);
+  }, [sortedPosts]);
 
   // Get categories with counts
   const categoriesWithCount = categories.map((cat) => {
