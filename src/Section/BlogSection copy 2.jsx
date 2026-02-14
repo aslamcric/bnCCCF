@@ -8,7 +8,7 @@ export default function BlogSection() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const postsPerPage = 3;
+  const postsPerPage = 5;
 
   const currentLang = i18n.language?.split("-")[0]?.toLowerCase() || "en";
 
@@ -52,53 +52,51 @@ export default function BlogSection() {
 
   // Search filter
   const searchedPosts = uniquePosts.filter((post) => {
-    const searchLower = searchTerm.toLowerCase();
-    const titleMatch = post.title?.toLowerCase().includes(searchLower);
-    const descMatch = post.sub_title?.toLowerCase().includes(searchLower);
-    const contentMatch = post.body?.toLowerCase().includes(searchLower);
+    const titleMatch = post.title
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const descMatch = post.sub_title
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const contentMatch = post.content
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
     return titleMatch || descMatch || contentMatch;
   });
 
-  // Sort posts by created_at in descending order (newest first)
-  const sortedPosts = [...searchedPosts].sort(
-    (a, b) => new Date(b.created_at) - new Date(a.created_at),
-  );
+  // Get recent posts (last 3) from searched posts
+  const recentPosts = [...searchedPosts]
+    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+    .slice(0, 3);
 
-  // Get recent posts (last 3) from sorted posts
-  const recentPosts = sortedPosts.slice(0, 3);
+  // Get all tags from searched posts
+  const allTags = [
+    ...new Set(searchedPosts.flatMap((post) => post.tags || [])),
+  ];
 
-  // Get all tags from sorted posts (if available in API)
-  const allTags = [...new Set(sortedPosts.flatMap((post) => post.tags || []))];
-
-  // Get categories with counts
-  const categoriesWithCount = categories.map((cat) => {
-    const count =
-      cat.posts?.filter((p) => {
-        const postLang = p.language
-          ? String(p.language).toLowerCase().trim()
-          : "";
-        return postLang === currentLang;
-      }).length || 0;
-
-    // ভাষা অনুযায়ী কাউন্ট দেখাও
-    const displayCount =
-      count === 0
-        ? currentLang === "bn"
-          ? "০০"
-          : "00"
-        : String(count).padStart(2, "0");
-
-    return {
+  // Get categories with counts from searched posts
+  const categoriesWithCount = categories
+    .map((cat) => ({
       name: cat.name,
-      count: displayCount,
-    };
-  });
+      count: String(
+        cat.posts?.filter((p) => {
+          const postLang = p.language
+            ? String(p.language).toLowerCase().trim()
+            : "";
+          return (
+            postLang === currentLang &&
+            searchedPosts.some((sp) => sp.id === p.id)
+          );
+        }).length || 0,
+      ).padStart(2, "0"),
+    }))
+    .filter((cat) => cat.count !== "00");
 
-  // Pagination logic for sorted posts
-  const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
+  // Pagination logic for searched posts
+  const totalPages = Math.ceil(searchedPosts.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = searchedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const getImageUrl = (path) => {
     if (!path) return "/assets/img/default-news.jpg";
@@ -126,12 +124,12 @@ export default function BlogSection() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset to first page on new search
   };
 
   const handleSearchInput = (e) => {
     setSearchTerm(e.target.value);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset to first page as user types
   };
 
   const getPageNumbers = () => {
@@ -159,7 +157,7 @@ export default function BlogSection() {
                     <div className="news-image">
                       <img
                         src={getImageUrl(post.cover_photo_path)}
-                        alt={post.photo_alt_text || post.title}
+                        alt={post.title}
                       />
                     </div>
                     <div className="news-content">
@@ -176,11 +174,7 @@ export default function BlogSection() {
                       <h3>
                         <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                       </h3>
-                      <p>
-                        {post.sub_title ||
-                          post.excerpt ||
-                          post.body?.replace(/<[^>]*>/g, "").substring(0, 150)}
-                      </p>
+                      <p>{post.sub_title || post.excerpt}</p>
                       <Link to={`/blog/${post.slug}`} className="theme-btn">
                         {btnText} <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -203,7 +197,7 @@ export default function BlogSection() {
               )}
 
               {/* Pagination */}
-              {totalPages > 1 && sortedPosts.length > 0 && (
+              {totalPages > 1 && searchedPosts.length > 0 && (
                 <div className="page-nav-wrap">
                   <ul>
                     <li>
@@ -279,7 +273,7 @@ export default function BlogSection() {
                   </div>
                 </div>
 
-                {/* Categories - সব ক্যাটেগরি দেখাবে */}
+                {/* Categories */}
                 <div className="single-sidebar-widget">
                   <div className="wid-title">
                     <h4>{sidebarCategories}</h4>
@@ -316,12 +310,7 @@ export default function BlogSection() {
                         <div className="recent-thumb">
                           <img
                             src={getImageUrl(post.cover_photo_path)}
-                            alt={post.photo_alt_text || post.title}
-                            style={{
-                              width: "150px",
-                              height: "80px",
-                              objectFit: "cover",
-                            }}
+                            alt={post.title}
                           />
                         </div>
                         <div className="recent-content">

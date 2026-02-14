@@ -4,359 +4,411 @@
     "email": "cccbangladesh2023@gmail.com",
     "phone": "+880 1610 377 725",
     "search": "Search here...",
-    "description": "We are dedicated to serving humanity and supporting the underprivileged in our society.",
-    "contact_info": "Contact Info",
-    "working_hours": "Mon-Friday, 09am - 05pm",
-    "donate": "Donate Now"
+    "description": "Center for Cancer Care Foundation (CCCF) is a voluntary, non-profit social organization for cancer patients and cancer survivors, family members of those affected, family members who have lost loved ones to cancer, relatives, friends, specialist doctors, and those interested in working for cancer prevention.",
+    "contact_info": "Contact Information",
+    "working_hours": "Mon-Fri, 09:00 AM - 05:00 PM",
+    "donate": "Donate Now",
+    "registration_no": "DHA-010075",
+    "website": "www.cccfbd.org"
   },
-
   "menu": {
     "home": "Home",
     "about": "About Us",
     "blog": "Blog",
-    "contact": "Contact Us",
+    "contact": "Contact",
     "pages": "Pages",
     "pagesMenu": {
-      "cause": "Cause",
-      "ourCause": "Our Cause",
-      "causeDetails": "Cause Details",
+      "cause": "Programs",
+      "ourCause": "Our Programs",
+      "causeDetails": "Program Details",
       "volunteer": "Volunteer",
-      "becomeVolunteer": "Become Volunteer",
+      "becomeVolunteer": "Become a Volunteer",
       "volunteerList": "Volunteer List",
       "volunteerDetails": "Volunteer Details",
       "event": "Event",
-      "ourEvent": "Our Event",
+      "ourEvent": "Our Events",
       "eventList": "Event List",
       "eventDetails": "Event Details",
       "donation": "Donation",
-      "ourDonation": "Our Donation",
-      "donationNow": "Donation Now",
+      "ourDonation": "Our Donations",
+      "donationNow": "Donate Now",
       "donationDetails": "Donation Details",
       "pricing": "Pricing",
       "faq": "FAQ"
     }
   },
-
   "homeHero": {
     "slides": [
       {
-        "subTitle": "Start Donating Poor People",
-        "title": "We Are Non Profit Charity Organization",
-        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
+        "subTitle": "Stand by Cancer Warriors",
+        "title": "Center for Cancer Care Foundation (CCCF)",
+        "description": "We work for cancer patients, survivors and their families. Awareness, counseling and essential information services are our main goals.",
+        "btnJoin": "Join Us",
+        "btnRead": "Read More"
+      },
+      {
+        "subTitle": "Every Life Matters",
+        "title": "Support Cancer Patients & Survivors",
+        "description": "Join us in our mission to provide counseling, information services, and support to cancer warriors and their caregivers across Bangladesh.",
         "btnJoin": "Join With Us",
         "btnRead": "Read More"
       },
       {
-        "subTitle": "Start Donating Poor People",
-        "title": "We Are Non Profit Charity Organization",
-        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
-        "btnJoin": "Join With Us",
-        "btnRead": "Read More"
-      },
-      {
-        "subTitle": "Start Donating Poor People",
-        "title": "We Are Non Profit Charity Organization",
-        "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in difference in someone's life.",
+        "subTitle": "Together We Can Win",
+        "title": "Cancer Awareness & Prevention",
+        "description": "Through our 'Jani O Janai' program and community outreach, we aim to reduce cancer rates through education and early detection.",
         "btnJoin": "Join With Us",
         "btnRead": "Read More"
       }
     ]
   },
-
   "aboutHero": {
     "title": "About Us",
     "home": "Home",
     "currentPage": "About Us"
   },
-
   "blogHero": {
     "title": "Blog List",
     "home": "Home",
     "currentPage": "Blog List"
   },
-
   "contactHero": {
-    "title": "Contact Us",
+    "title": "Contact",
     "home": "Home",
-    "currentPage": "Contact Us"
+    "currentPage": "Contact"
   },
-
   "about": {
     "subTitle": "About Us",
     "titleLetter": "O",
-    "titlePart1": "ur goal is to save more lives with your help",
-    "description": "Overall, I cannot recommend our initiatives highly enough. If you're looking for a foundation that serves with transparency and impeccable dedication, look no further. I will definitely be returning.",
-    "fundraisingTitle": "Fundraising",
-    "fundraisingDesc": "Looking for a platform that serves transparently with impeccable service, look no further.",
-    "donationTitle": "Donation Marketing",
-    "donationDesc": "Looking for a platform that serves transparently with impeccable service, look no further.",
-    "button": "More About Us",
-    "name": "James Anderson",
-    "designation": "Software Engineer"
+    "titlePart1": "ur Journey and Mission",
+    "description": "CCCF officially started its journey on June 3, 2023 by honoring cancer survivors. Earlier, on February 4, 2023, on World Cancer Day, a few of us survivors and caregivers gathered for an experience sharing and reunion meeting. The overwhelming response from everyone there urged us to do something seriously. In continuation of that urge, we formed the Center for Cancer Care Foundation (CCCF). In previous events, we started working under the name 'Cancer Care Community, Bangladesh'. Later the name was changed to CCCF.",
+    "fundraisingTitle": "Our Main Goal",
+    "fundraisingDesc": "Our main objective is to reduce the rate of cancer incidence in the country and ensure a healthy life for those affected by receiving timely treatment through experience sharing among cancer patients and survivors, information exchange, counseling, and increasing awareness about cancer screening, which will reduce the treatment burden.",
+    "donationTitle": "What We Do",
+    "donationDesc": "Cancer counseling services (online and face-to-face), essential information services for cancer patients, 'Pase Achi' (Mugdha Smriti Scholarship), cancer awareness program 'Jani O Janai', breast self-examination training and practice, volunteer training.",
+    "button": "Know About Us",
+    "name": "Rokshana Afroz",
+    "designation": "President, CCCF"
   },
-
-  "service": {
-    "subTitle": "Charity Services",
-    "titleLetter": "P",
-    "titlePart1": "roviding Humanist services to all",
-    "titlePart2": "people is what we do",
-    "learnMore": "Learn More",
-    "item1": {
-      "title": "Healthy Foods",
-      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
-    },
-    "item2": {
-      "title": "Education",
-      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
-    },
-    "item3": {
-      "title": "Medical Help",
-      "desc": "Looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further."
+  "publications": {
+    "subTitle": "Publications",
+    "titleLetter": "B",
+    "titlePart1": "ooks: Narratives of Cancer Warriors",
+    "description": "CCCF has published two books titled 'Ekhane Themo Na: Cancer Lorakuder Boyan' (Don't Stop Here: Narratives of Cancer Warriors) and 'Ekhane Themo Na: Cancer Lorakuk O Poricharokder Boyan' (Don't Stop Here: Narratives of Cancer Warriors and Caregivers), where 42 cancer survivors and 35 caregivers have written. Besides, a third book with writings by specialists is also forthcoming."
+  },
+  "janiJanai": {
+    "subTitle": "Regular Program",
+    "titleLetter": "K",
+    "titlePart1": "now and Let Know (Jani O Janai)",
+    "description": "With the aim of increasing cancer awareness and providing information on treatment and prevention of various cancers, we organize an online program titled 'Jani O Janai' every month. Cancer warriors, survivors and experts share their experiences and opinions. So far, 31 episodes of this series have been broadcast online.",
+    "youtube_link": "www.youtube.com/@cccf23"
+  },
+  "volunteerProgram": {
+    "title": "Volunteer Training",
+    "description": "CCCF has involved young people as volunteers. Already 70 students from various educational institutions have been involved as volunteers. Training is underway to make them skilled as cancer caregivers. After training, they will be able to provide services to patients in hospitals or at home."
+  },
+  "executiveCommittee": {
+    "title": "Executive Committee",
+    "members": {
+      "president": "Rokshana Afroz (President)",
+      "general_secretary": "Jahan-E-Gulshan Shapla (General Secretary)",
+      "treasurer": "Sifat Arefin Protik (Treasurer)",
+      "vice_president": "Khaleda Shah (Late) (Vice President)",
+      "program_secretary": "Nasrin Banu (Program Secretary)",
+      "publicity_secretary": "Jesmin Parvin (Public Relations & Publicity Secretary)",
+      "assistant_general_secretary": "Dr. Abu Jamil Faisal & Noor Muhammad (Assistant General Secretaries)",
+      "education_secretary": "Education, Research and Training Secretary",
+      "member1": "Md. Tariqul Islam (Member)",
+      "member2": "Mahfuza Haque (Member)",
+      "member3": "Dr. Hemanta Roy Chowdhury (Member)"
     }
   },
-
+  "advisoryCouncil": {
+    "title": "Advisory Council",
+    "members": [
+      "Captain Dr. Sitara Begum, Bir Protik",
+      "Emeritus Professor Sirajul Islam Chowdhury",
+      "Professor Dr. Halida Hanum Akhtar",
+      "Professor Dr. Akmol Hossain",
+      "Professor Anu Muhammad",
+      "Professor Dr. Samina Lutfa",
+      "Dr. Maloy Kanti Mridha",
+      "Captain (Retd.) Dr. Abidur Rahman",
+      "Professor Dr. Habibullah Talukder Raskin",
+      "Agricultural Scientist Dr. Mohammad Zainul Abedin",
+      "Professor Dr. Liakat Ali",
+      "Professor Dr. Nasrin Chowdhury",
+      "Nilufar Tasnim",
+      "Tahmina Gaffar"
+    ]
+  },
+  "proposals": {
+    "title": "Our Important Proposals",
+    "items": [
+      "We want quality, modern and adequate cancer treatment services to be developed at an affordable cost for all people regardless of nationality, religion, caste, gender, age, where the satisfaction of the patient and their relatives will be considered a priority.",
+      "We want a 'National Cancer Fund' to be formed with the participation of all sections of society under a state initiative to meet the treatment costs of cancer patients in the country.",
+      "We want a comprehensive cancer screening system to be developed at the community level for early cancer prevention.",
+      "We want a timely and effective cancer policy and national cancer control plan to be adopted for the general public.",
+      "We want to ensure adequate cancer counseling facilities in every hospital in the country. Professional cancer counselors should be appointed.",
+      "We want the cost of essential medicines and tests for cancer patients to be within the reach of the general public.",
+      "We want everyone in society to be cooperative in returning to normal life after cancer treatment. Ensure proper rehabilitation for them.",
+      "We want the promotion of cancer-risk foods and products in all types of media to be stopped. At the same time, mass media should come forward to increase awareness about cancer."
+    ]
+  },
+  "service": {
+    "subTitle": "Our Services",
+    "titleLetter": "C",
+    "titlePart1": "ancer Care Services & Activities",
+    "titlePart2": "",
+    "learnMore": "Learn More",
+    "item1": {
+      "title": "Cancer Counseling",
+      "desc": "Providing counseling services online and face-to-face."
+    },
+    "item2": {
+      "title": "Information Service",
+      "desc": "Providing essential information to cancer patients."
+    },
+    "item3": {
+      "title": "'Pase Achi' (Mugdha Smriti Scholarship)",
+      "desc": "Assisting cancer patients and survivors with education and care."
+    }
+  },
   "donation": {
-    "subTitle": "Lets Start Donating",
-    "titleLetter": "S",
-    "titlePart1": "ee You Impact Transparent",
-    "titlePart2": "Donation Causes",
+    "subTitle": "Start Donation Program",
+    "titleLetter": "O",
+    "titlePart1": "ur transparent donation activities",
+    "titlePart2": "",
     "learnMore": "Learn More",
     "donateNow": "Donate Now",
     "goal": "Goal",
     "raised": "Raised",
-
     "items": {
       "item1": {
-        "title": "Give African Children a Good Education",
-        "desc": "Supporting education to build a better future for children."
+        "title": "Formation of National Cancer Fund",
+        "desc": "Proposal to form a fund with the participation of all sections of society under a state initiative."
       },
       "item2": {
-        "title": "Support Learning, Inspire Hope in Africa",
-        "desc": "Helping underprivileged children gain access to education."
+        "title": "Comprehensive Cancer Screening System",
+        "desc": "Arranging extensive cancer screening at the community level for early prevention."
       },
       "item3": {
-        "title": "Building Bright Futures With Every Lesson",
-        "desc": "Empowering communities through education initiatives."
+        "title": "Enactment of Cancer Policy",
+        "desc": "Adopting a timely and effective cancer policy and national cancer control plan for the general public."
       },
       "item4": {
-        "title": "Help Children Dream Bigger With Education",
-        "desc": "Education opens doors to opportunity and hope."
+        "title": "Ensuring Cancer Counseling",
+        "desc": "Establishing adequate cancer counseling facilities in every hospital and appointing professional cancer counselors."
+      },
+      "item5": {
+        "title": "Affordable Medicine and Tests",
+        "desc": "Ensuring the cost of essential medicines and tests for cancer patients remains within the reach of the general public."
+      },
+      "item6": {
+        "title": "Ensuring Rehabilitation System",
+        "desc": "Ensuring social cooperation and rehabilitation arrangements for cancer patients to return to normal life after treatment."
+      },
+      "item7": {
+        "title": "Stop Promotion of Risky Products",
+        "desc": "Stopping the promotion of cancer-risk foods and products in all types of mass media."
+      },
+      "item8": {
+        "title": "Increase Awareness in Mass Media",
+        "desc": "Calling upon mass media to come forward to increase awareness about cancer."
       }
     }
   },
-
   "project": {
-    "subTitle": "Complete Project",
+    "subTitle": "Completed Projects",
     "titleLetter": "O",
-    "titlePart1": "ur Recent completed Project",
-
-    "category": "Charity & Funding",
-
+    "titlePart1": "ur Publications & Programs",
+    "category": "Cancer Awareness & Care",
     "items": {
       "item1": {
-        "title": "Child Education Project"
+        "title": "Publication of 'Ekhane Themo Na: Cancer Lorakuder Boyan'"
       },
       "item2": {
-        "title": "Health & Medical Support Initiative"
+        "title": "Publication of 'Ekhane Themo Na: Cancer Lorakuk O Poricharokder Boyan'"
       },
       "item3": {
-        "title": "Humanitarian Support for Underprivileged"
+        "title": "Broadcast of 31 episodes of 'Jani O Janai' online program"
       }
     }
   },
-
   "team": {
-    "subTitle": "Team Members",
-    "titleLetter": "M",
-    "titlePart1": "eet The Optimistic Volunteer",
+    "subTitle": "Executive Committee",
+    "titleLetter": "O",
+    "titlePart1": "ur Leadership & Volunteers",
     "members": {
       "member1": {
-        "name": "Darrell Steward",
-        "designation": "Software Developer"
+        "name": "Rokshana Afroz",
+        "designation": "President"
       },
       "member2": {
-        "name": "Courtney Henry",
-        "designation": "Software Developer"
+        "name": "Jahan-E-Gulshan Shapla",
+        "designation": "General Secretary"
       },
       "member3": {
-        "name": "Annette Black",
-        "designation": "Software Developer"
+        "name": "Sifat Arefin Protik",
+        "designation": "Treasurer"
       },
       "member4": {
-        "name": "Kristin Watson",
-        "designation": "Software Developer"
+        "name": "Jesmin Parvin",
+        "designation": "Public Relations & Publicity Secretary"
       }
     }
   },
-
   "testimonial": {
-    "subTitle": "Testimonials",
-    "titleLetter": "W",
-    "titlePart1": "hat People Say About Charity",
-    "totalRaised": "Total raising money in this year >",
-    "amount": "$4,50,000",
+    "subTitle": "Voices of Cancer Warriors",
+    "titleLetter": "N",
+    "titlePart1": "arratives of Experience",
+    "totalRaised": "Total Volunteers >",
+    "amount": "70+",
     "items": {
       "item1": {
-        "text": "Overall, I cannot recommend The Gourmet Bistro highly enough. If you're looking for a restaurant that serves delicious, beautifully presented dishes with impeccable service, look no further. I will definitely be returning soon to try more of their culinary delights.",
-        "name": "Jonny Ananta",
-        "designation": "Regular Customer’s"
+        "text": "I feel inspired to write in CCCF's book 'Ekhane Themo Na'. My cancer battle story will be courage for others.",
+        "name": "John Doe",
+        "designation": "Cancer Survivor"
       },
       "item2": {
-        "text": "The staff was amazing and the service exceptional. I enjoyed every bite of the meal, and the ambiance was perfect. Highly recommend!",
-        "name": "Anna Smith",
-        "designation": "Satisfied Donor"
-      },
-      "item3": {
-        "text": "A truly inspiring charity initiative. I am happy to support their cause and see the positive impact they bring to the community.",
-        "name": "Robert Johnson",
-        "designation": "Volunteer"
+        "text": "I am glad to share my experience as a caregiver. CCCF has given us a platform.",
+        "name": "Jane Smith",
+        "designation": "Caregiver"
       }
     }
   },
-
   "counter": {
-    "subTitle": "Numbers",
+    "subTitle": "Statistics",
     "titleLetter": "W",
-    "titlePart1": "e Always Help The Needy People",
-    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in making a difference.",
+    "titlePart1": "e Are Always by the Side of Helpless People",
+    "description": "Through cancer awareness, counseling and training, we are providing service.",
     "stats": {
-      "teamSupport": "Team Support",
-      "successfulCampaigns": "Successful Campaigns",
-      "incredibleVolunteers": "Incredible Volunteers",
-      "monthlyDonors": "Monthly Donors"
+      "teamSupport": "Team Members",
+      "successfulCampaigns": "Jani O Janai (Episodes)",
+      "incredibleVolunteers": "Volunteers",
+      "monthlyDonors": "Books Published"
+    },
+    "values": {
+      "teamSupport": "25+",
+      "successfulCampaigns": "31",
+      "incredibleVolunteers": "70+",
+      "monthlyDonors": "2"
     }
   },
-
   "faq": {
-    "subTitle": "Our Faq",
-    "titleLetter": "E",
-    "titlePart": "xplore our FAQs for quick and helpful guidance",
-    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society. It reminds us of the can make it your significant difference in someone's life.",
+    "subTitle": "Frequently Asked Questions",
+    "titleLetter": "F",
+    "titlePart": "requently Asked Questions & Answers",
+    "description": "Donation not only alleviates suffering but also creates unity and a sense of responsibility in society. It reminds us that our small contribution can bring a big change in someone's life.",
     "questions": [
       {
-        "id": "Two",
-        "question": "What Is Charity, And Why Is It Important?",
-        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "id": "One",
+        "question": "How does CCCF help cancer patients?",
+        "answer": "We provide support through cancer counseling, essential information services, 'Pase Achi' scholarship, and awareness program 'Jani O Janai'.",
         "expanded": false
       },
       {
-        "id": "One",
-        "question": "How Can I Get Involved In Charity Work?",
-        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "id": "Two",
+        "question": "How can I become a volunteer?",
+        "answer": "You can contact us through our website or email to join as a volunteer and receive training.",
         "expanded": false
       },
       {
         "id": "three",
-        "question": "Dedication for charitable Donations?",
-        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "question": "Where can I watch 'Jani O Janai' program?",
+        "answer": "You can watch all episodes on our YouTube channel 'www.youtube.com/@cccf23'.",
         "expanded": false
       },
       {
         "id": "four",
-        "question": "My Donations Are Going To a Charity?",
-        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "question": "What are our important proposals?",
+        "answer": "Formation of National Cancer Fund, community screening, enactment of cancer policy, ensuring counseling services etc. are our main proposals.",
         "expanded": false
       },
       {
         "id": "five",
-        "question": "Is my donation actually being put to use?",
-        "answer": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
+        "question": "What is the registration number of CCCF?",
+        "answer": "Our registration number is: DHA-010075. Visit www.cccfbd.org for details.",
         "expanded": false
       }
     ]
   },
-
   "newsSection": {
-    "subTitle": "bLOG & nEWS",
-    "titleLetter": "I",
-    "titlePart": "nsights from latest blog",
+    "subTitle": "Blog and News",
+    "titleLetter": "R",
+    "titlePart": "ecent Activities & Publications",
     "readMore": "Read More",
-    "authorLabel": "By : Admin",
-    "commentLabel": "By : Comment",
+    "authorLabel": "Author : Admin",
+    "commentLabel": "Comments : Comment",
     "newsList": [
       {
         "image": "assets/img/home-1/news/01.jpg",
-        "title": "How Education Can Transform a Child’s Future.",
+        "title": "Unveiling of the book 'Ekhane Themo Na'",
         "delay": ".3s"
       },
       {
         "image": "assets/img/home-1/news/02.jpg",
-        "title": "How Education Can Transform a Child’s Future.",
+        "title": "31st episode of 'Jani O Janai' broadcast",
         "delay": ".5s"
       },
       {
         "image": "assets/img/home-1/news/03.jpg",
-        "title": "How Education Can Transform a Child’s Future.",
+        "title": "70 volunteers receiving cancer care training",
         "delay": ".7s"
       }
     ]
   },
-
   "contactSection": {
-    "titleLetter": "A",
-    "titlePart": "lways open to more people who what to support easts other",
-    "description": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society It reminds us of the can make it.",
-    "btnText": "Explore More",
-    "callLabel": "Call :",
-    "phoneNumber": "+880 1670 377 725"
+    "titleLetter": "W",
+    "titlePart": "e Are Always Open for Those Who Want to Help Each Other",
+    "description": "Donation not only alleviates suffering but also awakens unity and a sense of responsibility in society. It reminds us how much change we can bring.",
+    "btnText": "Learn More",
+    "callLabel": "Call Us :",
+    "phoneNumber": "+880 1610 377 725"
   },
-
   "blog": {
-    "btnText": "More About Us",
+    "btnText": "Know More About Us",
     "sidebar": {
       "search": "Search",
       "searchPlaceholder": "Search here",
       "categories": "Categories",
-      "recentPost": "Recent Post",
+      "recentPost": "Recent Posts",
       "tagCloud": "Tag Cloud"
     },
     "posts": [
       {
         "img": "assets/img/home-1/news/08.jpg",
-        "date": "11 March 2025",
-        "comments": "19 Comments",
-        "title": "How Education Can Transform a Child’s Future.",
-        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
+        "date": "June 3, 2023",
+        "comments": "5 Comments",
+        "title": "CCCF's Official Journey Begins",
+        "desc": "CCCF officially started its journey on June 3, 2023 by honoring cancer survivors."
       },
       {
         "img": "assets/img/home-1/news/09.jpg",
-        "date": "11 March 2025",
-        "comments": "19 Comments",
-        "title": "Lighting the Path: How Learning Shapes a Child’s Destiny",
-        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
-      },
-      {
-        "img": "assets/img/home-1/news/10.jpg",
-        "date": "11 March 2025",
-        "comments": "19 Comments",
-        "title": "Turning Possibility into Progress Through Education",
-        "desc": "When we extend a helping hand to those in need, we’re not just addressing immediate problems — we’re building connections that strengthen communities."
+        "date": "February 4, 2023",
+        "comments": "8 Comments",
+        "title": "Experience Sharing Meeting on Cancer Day",
+        "desc": "On World Cancer Day, a few of us survivors and caregivers gathered for an experience sharing meeting."
       }
     ],
     "recentPosts": [
       {
         "img": "assets/img/inner-page/news-details/post-1.jpg",
-        "title": "Where Creativity Meets Commitment",
-        "date": "March 26, 2025"
+        "title": "New episode of 'Jani O Janai'",
+        "date": "March 2025"
       },
       {
         "img": "assets/img/inner-page/news-details/post-2.jpg",
-        "title": "Where Innovation Meets Foundation",
-        "date": "March 26, 2025"
-      },
-      {
-        "img": "assets/img/inner-page/news-details/post-3.jpg",
-        "title": "Structures That Stand Dreams That Soar",
-        "date": "March 26, 2025"
+        "title": "Volunteer training begins",
+        "date": "February 2025"
       }
     ],
-    "tags": ["fundraising", "charity", "donation", "water", "kids", "Education"]
+    "tags": ["Cancer", "Awareness", "Volunteer", "Counseling", "Book", "Fund"]
   },
-
   "contactForm": {
     "info": {
       "phone": {
-        "label": "Phone No",
+        "label": "Phone Number",
         "num": "+880 1610 377 725"
       },
       "location": {
@@ -369,31 +421,30 @@
       }
     },
     "form": {
-      "title": "Fill Up The Form",
+      "title": "Fill Out The Form",
       "namePlaceholder": "Your Name",
       "emailPlaceholder": "Enter Your Email",
       "phonePlaceholder": "Phone Number",
       "addressPlaceholder": "Your Address",
-      "messagePlaceholder": "Type your message",
-      "submitBtn": "Get A Quote"
+      "messagePlaceholder": "Write Your Message",
+      "submitBtn": "Get Quotation"
     }
   },
-
   "footer": {
     "quickLinks": "Quick Links",
-    "explore": "Explore Now",
+    "explore": "Explore",
     "supports": "Supports",
     "newsletter": "Newsletter",
-    "newsletterDesc": "Charity not only helps to reduce suffering but also fosters a sense of unity and shared responsibility in society.",
-    "subscribe": "Subscribe Now",
+    "newsletterDesc": "Subscribe to get our latest news on cancer awareness and care.",
+    "subscribe": "Subscribe",
     "placeholder": "Enter Your Email",
-    "copyright": "Copyright © {{year}} Center for Cancer Care Foundation (CCCF). All Rights Reserved.",
+    "copyright": "Copyright © {{year}} Center for Cancer Care Foundation (CCCF). All rights reserved.",
     "gallery": "Gallery",
     "volunteers": "Volunteers",
-    "project": "Project",
-    "event": "Event",
+    "project": "Projects",
+    "event": "Events",
     "causes": "Causes",
-    "donation": "Donation",
+    "donation": "Donations",
     "forums": "Forums",
     "policy": "Support Policy",
     "careers": "Careers"

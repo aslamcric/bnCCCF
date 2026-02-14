@@ -5,10 +5,8 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   const { t } = useTranslation();
 
-  // JSON থেকে স্লাইডারের ডাটা নেওয়া হচ্ছে
   const slides = t("homeHero.slides", { returnObjects: true });
 
-  // ইমেজের নামগুলো স্লাইড অনুযায়ী ডাইনামিক করার জন্য একটি অ্যারে
   const backgroundImages = [
     "assets/img/home-1/hero/hero-bg.jpg",
     "assets/img/home-1/hero/hero-bg-2.jpg",

@@ -1,3 +1,4 @@
+/* Main Root */
 :root {
     --body: #fff;
     --black: #000;
@@ -6330,7 +6331,8 @@ span {
 }
 
 .header-1 .container-fluid {
-    padding: 0 120px;
+    /* padding: 0 120px; */
+    padding: 0 50px;
 }
 
 @media (max-width: 1399px) {
