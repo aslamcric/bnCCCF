@@ -1,9 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const isDetailsPage = location.pathname.includes("-details") || location.pathname.includes("/blog/");
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -63,7 +65,7 @@ export default function Header() {
               <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                 <div className="offcanvas__logo">
                   <NavLink to="/">
-                    <img src="assets/img/logo/logo.png" alt="logo-img" />
+                    <img src="/assets/img/logo/logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
                 <div className="offcanvas__close">
@@ -149,7 +151,7 @@ export default function Header() {
               <div className="header-left">
                 <div className="logo">
                   <NavLink to="/" className="header-logo">
-                    <img src="assets/img/logo/logo.png" alt="logo-img" />
+                    <img src="/assets/img/logo/logo.png" alt="logo-img" />
                   </NavLink>
                 </div>
               </div>
@@ -308,8 +310,7 @@ export default function Header() {
                   <i className="fa-regular fa-magnifying-glass" />
                 </a>
 
-                {/* ল্যাঙ্গুয়েজ বাটন - ডেস্কটপে পূর্ণ নাম এবং মোবাইলে BN/EN দেখাবে */}
-                <div className="header-button" style={{ marginLeft: "15px" }}>
+                {/* <div className="header-button" style={{ marginLeft: "15px" }}>
                   <button
                     className="theme-btn"
                     style={{
@@ -329,7 +330,31 @@ export default function Header() {
                       {i18n.language === "en" ? " BN" : " EN"}
                     </span>
                   </button>
-                </div>
+                </div> */}
+
+                {!isDetailsPage && (
+                  <div className="header-button" style={{ marginLeft: "15px" }}>
+                    <button
+                      className="theme-btn"
+                      style={{
+                        padding: "10px 16px",
+                        fontSize: "14px",
+                        minWidth: "60px",
+                      }}
+                      onClick={() =>
+                        changeLanguage(i18n.language === "en" ? "bn" : "en")
+                      }
+                    >
+                      <i className="fa-solid fa-globe mr-1"></i>
+                      <span className="d-none d-md-inline">
+                        {i18n.language === "en" ? " বাংলা" : " English"}
+                      </span>
+                      <span className="d-md-none">
+                        {i18n.language === "en" ? " BN" : " EN"}
+                      </span>
+                    </button>
+                  </div>
+                )}
 
                 <div className="header__hamburger d-xl-none my-auto">
                   <div className="sidebar__toggle">

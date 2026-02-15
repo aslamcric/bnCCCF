@@ -72,10 +72,9 @@ export default function BlogSection() {
     const searchLower = searchTerm.toLowerCase();
 
     if (searchType === "category") {
-      // ক্যাটাগরি দিয়ে সার্চ
       return post.category_name?.toLowerCase().includes(searchLower);
     } else if (searchType === "tag") {
-      // ট্যাগ দিয়ে সার্চ
+
       if (post.tags && Array.isArray(post.tags)) {
         return post.tags.some((tag) =>
           tag.name?.toLowerCase().includes(searchLower),
@@ -83,7 +82,6 @@ export default function BlogSection() {
       }
       return false;
     } else {
-      // সাধারণ টেক্সট সার্চ (টাইটেল, সাবটাইটেল, বডি)
       const titleMatch = post.title?.toLowerCase().includes(searchLower);
       const descMatch = post.sub_title?.toLowerCase().includes(searchLower);
       const contentMatch = post.body?.toLowerCase().includes(searchLower);
@@ -96,29 +94,18 @@ export default function BlogSection() {
     (a, b) => new Date(b.created_at) - new Date(a.created_at),
   );
 
-  // Get recent posts (last 3) from sorted posts
   const recentPosts = sortedPosts.slice(0, 3);
 
-  // Get all tags with counts
-  const allTags = useMemo(() => {
-    const tagCount = new Map();
-
-    uniquePosts.forEach((post) => {
-      if (post.tags && Array.isArray(post.tags)) {
-        post.tags.forEach((tag) => {
-          if (tag.name) {
-            tagCount.set(tag.name, (tagCount.get(tag.name) || 0) + 1);
-          }
-        });
-      }
+  const tagCount = {};
+  uniquePosts.forEach((post) => {
+    post.tags?.forEach((tag) => {
+      if (tag.name) tagCount[tag.name] = (tagCount[tag.name] || 0) + 1;
     });
-
-    // কাউন্ট অনুযায়ী সাজিয়ে প্রথম ৮টি নেওয়া
-    return Array.from(tagCount.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 8)
-      .map(([tagName]) => tagName);
-  }, [uniquePosts]);
+  });
+  const allTags = Object.entries(tagCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([name]) => name);
 
   // Get categories with counts
   const categoriesWithCount = categories.map((cat) => {
@@ -205,6 +192,7 @@ export default function BlogSection() {
     return pageNumbers;
   };
 
+
   if (loading) {
     return <div className="text-center p-5">Loading...</div>;
   }
@@ -244,7 +232,7 @@ export default function BlogSection() {
                           post.excerpt ||
                           post.body?.replace(/<[^>]*>/g, "").substring(0, 150)}
                       </p>
-                      <Link to={`/blog/${post.slug}`} className="theme-btn">
+                      <Link to={`/blog-details/${post?.id}`} className="theme-btn">
                         {btnText} <i className="fa-solid fa-arrow-right-long" />
                       </Link>
                     </div>
@@ -342,7 +330,6 @@ export default function BlogSection() {
                   </div>
                 </div>
 
-                {/* Categories - সব ক্যাটেগরি দেখাবে */}
                 <div className="single-sidebar-widget">
                   <div className="wid-title">
                     <h4>{sidebarCategories}</h4>

@@ -6,6 +6,7 @@ import ContactUs from "../pages/ContactUs";
 import Blog from "../pages/Blog";
 import Pages from "../pages/Pages";
 import ErrorPage from "../pages/ErrorPage";
+import BlogDetails from "../Section/BlogDetails";
 // layouts
 
 // public pages
@@ -44,6 +45,13 @@ export const router = createBrowserRouter([
         path: "*",
         element: <ErrorPage />,
       },
+
+      // subsection 
+      {
+        path: "/blog-details/:id",
+        element: <BlogDetails />
+      }
+
     ],
   },
 ]);

@@ -367,7 +367,7 @@
     "phoneNumber": "+880 1610 377 725"
   },
   "blog": {
-    "btnText": "Know More About Us",
+    "btnText": "Read More",
     "sidebar": {
       "search": "Search",
       "searchPlaceholder": "Search here",
@@ -403,7 +403,14 @@
         "date": "February 2025"
       }
     ],
-    "tags": ["Cancer", "Awareness", "Volunteer", "Counseling", "Book", "Fund"]
+    "tags": [
+      "Cancer",
+      "Awareness",
+      "Volunteer",
+      "Counseling",
+      "Book",
+      "Fund"
+    ]
   },
   "contactForm": {
     "info": {
