@@ -19,7 +19,6 @@ export default function AboutSection() {
                   </span>
 
                   <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                    {/* key ব্যবহার করা হয়েছে যাতে ভাষা বদলালে রেন্ডারিং ঠিক থাকে */}
                     <span key={i18n.language}>{t("about.titleLetter")}</span>
                     {t("about.titlePart1")}
                     {i18n.language !== "en" && <br />}

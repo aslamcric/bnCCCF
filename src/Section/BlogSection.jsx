@@ -8,7 +8,7 @@ export default function BlogSection() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchType, setSearchType] = useState("text"); // 'text', 'category', 'tag'
+  const [searchType, setSearchType] = useState("text");
   const postsPerPage = 3;
 
   const currentLang = i18n.language?.split("-")[0]?.toLowerCase() || "en";
@@ -74,7 +74,6 @@ export default function BlogSection() {
     if (searchType === "category") {
       return post.category_name?.toLowerCase().includes(searchLower);
     } else if (searchType === "tag") {
-
       if (post.tags && Array.isArray(post.tags)) {
         return post.tags.some((tag) =>
           tag.name?.toLowerCase().includes(searchLower),
@@ -151,10 +150,6 @@ export default function BlogSection() {
     });
   };
 
-  const getCommentText = (count) => {
-    return `${count}${currentLang === "bn" ? "টি মন্তব্য" : " Comments"}`;
-  };
-
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -192,7 +187,6 @@ export default function BlogSection() {
     return pageNumbers;
   };
 
-
   if (loading) {
     return <div className="text-center p-5">Loading...</div>;
   }
@@ -220,19 +214,24 @@ export default function BlogSection() {
                           {formatDate(post.created_at)}
                         </li>
                         <li>
-                          <i className="fa-solid fa-comments" />
-                          {getCommentText(post.comments_count || 0)}
+                          <i className="fa-regular fa-user-pen" />{" "}
+                          {post.author_name || "Admin"}
                         </li>
                       </ul>
                       <h3>
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                        <Link to={`/blog-details/${post?.id}`}>
+                          {post.title}
+                        </Link>
                       </h3>
                       <p>
                         {post.sub_title ||
                           post.excerpt ||
                           post.body?.replace(/<[^>]*>/g, "").substring(0, 150)}
                       </p>
-                      <Link to={`/blog-details/${post?.id}`} className="theme-btn">
+                      <Link
+                        to={`/blog-details/${post?.id}`}
+                        className="theme-btn"
+                      >
                         {btnText} <i className="fa-solid fa-arrow-right-long" />
                       </Link>
                     </div>
@@ -283,6 +282,15 @@ export default function BlogSection() {
                             e.preventDefault();
                             handlePageChange(number);
                           }}
+                          style={
+                            currentPage === number
+                              ? {
+                                  backgroundColor: "#FFC107",
+                                  color: "#122F2A",
+                                  borderColor: "#FFC107",
+                                }
+                              : {}
+                          }
                         >
                           {number.toString().padStart(2, "0")}
                         </a>
