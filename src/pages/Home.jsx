@@ -10,12 +10,14 @@ import CounterSection from "../Section/CounterSection";
 import FaqSection from "../Section/FaqSection";
 import NewsSection from "../Section/NewsSection";
 import ContactSection from "../Section/ContactSection";
+import { SwiperTest } from "../Section/SwiperTest";
 
 export default function Home() {
   return (
     <div>
       {/* All section include  */}
       <HomeHeroSection />
+      <SwiperTest />
       <AboutSection />
       <ServiceSection />
       <DonationSection />

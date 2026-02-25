@@ -12368,3 +12368,31 @@ span {
     position: relative;
     z-index: 999;
 }
+
+.swiperTest-container {
+    height: 500px;
+    width: 100%;
+}
+
+.swiperTest {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slideTest {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slideTest img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
